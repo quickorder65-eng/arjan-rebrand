@@ -38,6 +38,8 @@
     var mm = document.getElementById('mobileMenu');
     if (burger && mm) {
       burger.addEventListener('click', function () {
+        var hdrEl = document.querySelector('header.nav');
+        if (hdrEl) mm.style.setProperty('--mm-top', Math.max(0, hdrEl.getBoundingClientRect().bottom) + 'px');
         var open = mm.classList.toggle('open');
         burger.setAttribute('aria-expanded', open);
         document.body.style.overflow = open ? 'hidden' : '';
@@ -50,6 +52,9 @@
         });
       });
     }
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && mm && mm.classList.contains('open')) { burger.click(); burger.focus(); }
+    });
     var hdr = document.querySelector('header.nav');
     if (hdr) {
       var onScroll = function () { hdr.classList.toggle('scrolled', window.scrollY > 10); };
@@ -61,7 +66,7 @@
     document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(function (a) {
       try {
         var url = new URL(a.href, location.href);
-        if (url.pathname === location.pathname) a.classList.add('active');
+        if (url.pathname === location.pathname && !url.hash) { a.classList.add('active'); a.setAttribute('aria-current', 'page'); }
       } catch (e) {}
     });
   }
@@ -70,7 +75,7 @@
   function initFaq() {
     document.querySelectorAll('.qa button').forEach(function (btn) {
       btn.addEventListener('click', function () {
-        var qa = btn.parentElement, ans = qa.querySelector('.ans');
+        var qa = btn.closest('.qa'), ans = qa.querySelector('.ans');
         var open = qa.classList.toggle('open');
         btn.setAttribute('aria-expanded', open);
         ans.style.maxHeight = open ? ans.scrollHeight + 'px' : null;
@@ -78,28 +83,25 @@
     });
   }
 
-  /* ---------- reveal on scroll ---------- */
+  /* ---------- фирменное движение: «рама смыкается», «печать ставится» ----------
+     [data-frame] — уголки рамы логотипа сходятся по диагонали и открывают фото;
+     [data-stamp] — красный круг ставится как печать;
+     [data-rise]  — спокойное появление заголовков секций.
+     Без JS и при prefers-reduced-motion всё сразу видно в финальном состоянии. */
   function initReveal() {
-    if (reduceMotion) return;
+    var els = [].slice.call(document.querySelectorAll('[data-frame],[data-stamp],[data-rise]'));
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      els.forEach(function (el) { el.classList.add('is-in'); });
+      return;
+    }
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         if (!en.isIntersecting) return;
-        var el = en.target, d = +el.dataset.rd || 0;
-        io.unobserve(el);
-        setTimeout(function () {
-          el.classList.add('in');
-          setTimeout(function () { el.classList.remove('reveal', 'in'); }, 750);
-        }, d);
+        en.target.classList.add('is-in');
+        io.unobserve(en.target);
       });
-    }, { threshold: 0, rootMargin: '0px 0px 40% 0px' });
-    document.querySelectorAll('.shead,.calc,.ctaband,.cform,.partners,.map-block,.text-block').forEach(function (el) {
-      el.classList.add('reveal'); io.observe(el);
-    });
-    ['.path', '.prod', '.case', '.proof-card', '.geo .city', '.qa', '.branch-card', '.step', '.pf-card', '.pshot'].forEach(function (sel) {
-      document.querySelectorAll(sel).forEach(function (el, i) {
-        el.classList.add('reveal'); el.dataset.rd = Math.min(i, 6) * 70; io.observe(el);
-      });
-    });
+    }, { threshold: 0.18, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(function (el) { io.observe(el); });
   }
 
   /* ---------- fade photos in only once fully loaded (no half-painted images while scrolling) ---------- */
@@ -161,6 +163,7 @@
       idx = (i + slides.length) % slides.length;
       slides[idx].classList.add('active');
       dots[idx] && dots[idx].classList.add('active');
+      dots.forEach(function (d, j) { d.setAttribute('aria-pressed', j === idx ? 'true' : 'false'); });
     }
     function next() { show(idx + 1); }
     function start() {

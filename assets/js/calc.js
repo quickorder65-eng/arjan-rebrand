@@ -16,13 +16,14 @@
 
   function fill(el) {
     var p = (el.value - el.min) / (el.max - el.min) * 100;
-    el.style.background = 'linear-gradient(90deg,var(--sun) ' + p + '%,var(--mist) ' + p + '%)';
+    el.style.backgroundImage = 'linear-gradient(90deg,var(--sun) ' + p + '%,var(--mist) ' + p + '%)';
   }
 
   var aLow = 0, aHigh = 0, raf;
   function setPrice(low, high) {
     if (reduce) { aLow = low; aHigh = high; priceEl.innerHTML = fmt(low) + ' – ' + fmt(high) + ' <span>₸</span>'; return; }
     cancelAnimationFrame(raf);
+    priceEl.classList.remove('pulse'); void priceEl.offsetWidth; priceEl.classList.add('pulse');
     var sL = aLow, sH = aHigh, t0 = performance.now(), dur = 450;
     (function tick(now) {
       var p = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - p, 3);
@@ -47,15 +48,15 @@
 
   copts.forEach(function (o) {
     o.addEventListener('click', function () {
-      copts.forEach(function (x) { x.classList.remove('active'); });
-      o.classList.add('active');
+      copts.forEach(function (x) { x.classList.remove('active'); x.setAttribute('aria-pressed', 'false'); });
+      o.classList.add('active'); o.setAttribute('aria-pressed', 'true');
       cbase = +o.dataset.base; cname = o.dataset.name; calc();
     });
   });
   document.querySelectorAll('#cseg button').forEach(function (b) {
     b.addEventListener('click', function () {
-      document.querySelectorAll('#cseg button').forEach(function (x) { x.classList.remove('active'); });
-      b.classList.add('active'); ccity = b.textContent; calc();
+      document.querySelectorAll('#cseg button').forEach(function (x) { x.classList.remove('active'); x.setAttribute('aria-pressed', 'false'); });
+      b.classList.add('active'); b.setAttribute('aria-pressed', 'true'); ccity = b.textContent; calc();
     });
   });
   document.getElementById('cminus').addEventListener('click', function () { ccount.value = Math.max(1, (parseInt(ccount.value) || 1) - 1); calc(); });
