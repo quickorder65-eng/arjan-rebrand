@@ -16,12 +16,12 @@
 <meta property="og:image" content="https://arjan.kz/public/branding/og-default.jpg">
 <meta property="og:locale" content="ru_RU">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" type="image/png" sizes="32x32" href="/public/branding/favicon-32.png">
-<link rel="apple-touch-icon" href="/public/branding/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="public/branding/favicon-32.png">
+<link rel="apple-touch-icon" href="public/branding/apple-touch-icon.png">
 
-<link rel="preload" href="/assets/fonts/rubik-cyrillic-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/assets/fonts/golos-text-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/style.css?v=20261112">
+<link rel="preload" href="assets/fonts/rubik-cyrillic-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/golos-text-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css?v=20261112">
 <script>document.documentElement.classList.add('js')</script>
 
 <script type="application/ld+json">
@@ -99,16 +99,16 @@
 <!-- header -->
 <header class="nav">
   <div class="wrap nav__in">
-    <a href="/" class="logo" aria-label="ArJan — на главную"><img src="/public/branding/logo.png" alt="" width="111" height="42" loading="eager" decoding="async"></a>
+    <a href="index.html" class="logo" aria-label="ArJan — на главную"><img src="public/branding/logo.png" alt="" width="111" height="42" loading="eager" decoding="async"></a>
     <nav class="nav-links" aria-label="Основная навигация">
-      <a href="/developers.html">Для бизнеса</a>
-      <a href="/#products">Продукция</a>
-      <a href="/terrasy.html">Системы для террас</a>
-      <a href="/production.html">Производство</a>
-      <a href="/portfolio.html">Объекты</a>
-      <a href="/#geo">География</a>
-      <a href="/#faq">Вопросы</a>
-      <a href="/#contacts">Контакты</a>
+      <a href="developers.html">Для бизнеса</a>
+      <a href="index.html#products">Продукция</a>
+      <a href="terrasy.html">Системы для террас</a>
+      <a href="production.html">Производство</a>
+      <a href="portfolio.html">Объекты</a>
+      <a href="index.html#geo">География</a>
+      <a href="index.html#faq">Вопросы</a>
+      <a href="index.html#contacts">Контакты</a>
     </nav>
     <div class="nav-cta">
       <a href="tel:+77088005929" class="nav-phone">8 (708) 800-59-29</a>
@@ -118,14 +118,14 @@
   </div>
   <div class="mobile-menu on-dark" id="mobileMenu">
     <nav class="mm-links" aria-label="Мобильная навигация">
-      <a href="/developers.html"><span class="mm-no">01</span>Для бизнеса</a>
-      <a href="/#products"><span class="mm-no">02</span>Продукция</a>
-      <a href="/terrasy.html"><span class="mm-no">03</span>Системы для террас</a>
-      <a href="/production.html"><span class="mm-no">04</span>Производство</a>
-      <a href="/portfolio.html"><span class="mm-no">05</span>Объекты</a>
-      <a href="/#geo"><span class="mm-no">06</span>География</a>
-      <a href="/#faq"><span class="mm-no">07</span>Вопросы</a>
-      <a href="/#contacts"><span class="mm-no">08</span>Контакты</a>
+      <a href="developers.html"><span class="mm-no">01</span>Для бизнеса</a>
+      <a href="index.html#products"><span class="mm-no">02</span>Продукция</a>
+      <a href="terrasy.html"><span class="mm-no">03</span>Системы для террас</a>
+      <a href="production.html"><span class="mm-no">04</span>Производство</a>
+      <a href="portfolio.html"><span class="mm-no">05</span>Объекты</a>
+      <a href="index.html#geo"><span class="mm-no">06</span>География</a>
+      <a href="index.html#faq"><span class="mm-no">07</span>Вопросы</a>
+      <a href="index.html#contacts"><span class="mm-no">08</span>Контакты</a>
     </nav>
     <div class="mm-foot">
       <a href="tel:+77088005929" class="mm-phone">8 (708) 800-59-29</a>
@@ -136,28 +136,23 @@
 </header>
 
 <main id="main">
-<section class="hero on-dark" id="top">
-  <div class="hero__grid-lines" aria-hidden="true"></div>
-  <div class="wrap hero__in">
-    <div class="hero__text">
-      <span class="label">Профильные системы и окна с 2003 года</span>
-      <h1 class="h1">Оконные и дверные решения <span class="accent">ArJan</span></h1>
-      <p class="lead">Окна, двери и раздвижные конструкции с бесплатным замером, доставкой и монтажом собственными бригадами — для дома и бизнеса.</p>
-      <div class="actions">
-        <a href="/developers.html" class="btn btn--sun">Для бизнеса и объектов</a>
-        <a href="#calc" class="btn btn--ghost">Частным клиентам</a>
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-card on-dark">
+      <span class="hero__glow" aria-hidden="true"></span>
+      <div class="hero__text">
+        <span class="label">Профильные системы и окна с 2003 года</span>
+        <h1 class="h1">Оконные и дверные решения <span class="accent">ArJan</span></h1>
+        <p class="lead">Окна, двери и раздвижные конструкции с бесплатным замером, доставкой и монтажом собственными бригадами — для дома и бизнеса.</p>
+        <div class="actions">
+          <a href="developers.html" class="btn btn--sun">Для бизнеса и объектов</a>
+          <a href="#calc" class="btn btn--glass">Частным клиентам</a>
+        </div>
       </div>
-      <dl class="hero__trust">
-        <div><dt>Гарантия</dt><dd>5+ лет на продукцию</dd></div>
-        <div><dt>Замер</dt><dd>бесплатно</dd></div>
-        <div><dt>Оплата</dt><dd>рассрочка Kaspi</dd></div>
-      </dl>
-    </div>
-
-    <div class="win" data-win>
+      <div class="win" data-win>
       <div class="win__box">
         <div class="win__view">
-          <picture><source srcset="/public/products/terrasy/bioklimatik-hero.webp" type="image/webp"><img src="/public/products/terrasy/bioklimatik-hero.jpg" alt="Вид через открытое окно на террасу с биоклиматической перголой" width="1524" height="846" fetchpriority="high"></picture>
+          <picture><source srcset="public/products/terrasy/bioklimatik-hero.webp" type="image/webp"><img src="public/products/terrasy/bioklimatik-hero.jpg" alt="Вид через открытое окно на террасу с биоклиматической перголой" width="1524" height="846" fetchpriority="high"></picture>
         </div>
         <span class="win__transom" aria-hidden="true"></span>
         <div class="win__opening">
@@ -166,17 +161,18 @@
         </div>
         <span class="win__sill" aria-hidden="true"></span>
       </div>
-      <span class="win__caption">Биоклиматическая пергола · системы для террас</span>
+      <span class="fchip fchip--a"><span class="fchip__ico" aria-hidden="true">✓</span><span><b>Гарантия</b> 5+ лет на продукцию</span></span>
+        <span class="fchip fchip--b"><span class="fchip__ico" aria-hidden="true">✓</span><span><b>Замер</b> бесплатно</span></span>
+        <span class="fchip fchip--c"><span class="fchip__ico" aria-hidden="true">₸</span><span><b>Оплата</b> рассрочка Kaspi</span></span>
+        <span class="win__caption">Биоклиматическая пергола · системы для террас</span>
+      </div>
       <script>(function(){var w=document.querySelector('[data-win]'),i=w&&w.querySelector('.win__view img'),done=false;function go(){if(done)return;done=true;w.classList.add('is-go')}if(!w)return;if(i&&i.complete)go();else{if(i){i.addEventListener('load',go);i.addEventListener('error',go)}setTimeout(go,600)}})();</script>
     </div>
-  </div>
-
-  <div class="hero__stats">
-    <div class="wrap hero__stats-in">
+    <div class="stats">
       <div class="stat"><div class="num" data-no-group="1">2003</div><div class="lbl">работаем с этого года</div></div>
       <div class="stat"><div class="num">2 500<span> м²</span></div><div class="lbl">производственная площадка</div></div>
       <div class="stat"><div class="num">1000<span>+</span></div><div class="lbl">реализованных проектов</div></div>
-      <div class="stat"><div class="num">3</div><div class="lbl">города присутствия в РК</div></div>
+      <div class="stat stat--red"><div class="num">3</div><div class="lbl">города присутствия в РК</div></div>
     </div>
   </div>
 </section>
@@ -190,7 +186,7 @@
     </div>
     <div class="paths">
       <article class="path path--dark on-dark" id="b2b">
-        <div class="path__top"><span class="path__no">01</span><span class="tag tag--sun">Для дилеров и застройщиков</span></div>
+        <div class="path__top"><span class="path__ico path__ico--b" aria-hidden="true"></span><span class="tag tag--sun">Для дилеров и застройщиков</span></div>
         <h3 class="h3">Для бизнеса</h3>
         <p>Поставка профиля и готовых конструкций для строительных объектов, комплектация проектов под ключ, оптовые условия и согласованные сроки — для дилеров и застройщиков.</p>
         <ul class="checks">
@@ -200,12 +196,12 @@
           <li>Продукция ArJan использована в проектах в Алматы, Атырау и Актау</li>
         </ul>
         <div class="actions">
-          <a href="/developers.html" class="btn btn--sun">Подробнее для бизнеса</a>
+          <a href="developers.html" class="btn btn--sun">Подробнее для бизнеса</a>
           <a href="https://wa.me/77088005929?text=Здравствуйте!%20Работаю%20с%20объёмом%20(дилер/застройщик),%20хочу%20обсудить%20поставку%20продукции%20ArJan" class="btn btn--wa" target="_blank" rel="noopener">Написать в WhatsApp</a>
         </div>
       </article>
       <article class="path">
-        <div class="path__top"><span class="path__no">02</span><span class="tag">Для дома и квартиры</span></div>
+        <div class="path__top"><span class="path__ico path__ico--h" aria-hidden="true"></span><span class="tag">Для дома и квартиры</span></div>
         <h3 class="h3">Частным клиентам</h3>
         <p>Тёплые, тихие и надёжные окна для квартиры, дома или коттеджа — от замера до монтажа.</p>
         <ul class="checks">
@@ -228,11 +224,11 @@
       <div class="head__a"><p class="lead">Профиль, фурнитура, готовые окна и двери, раздвижные системы — от поставки материала до готовой конструкции с монтажом.</p></div>
     </div>
     <div class="cfg">
-      <div class="cfg__tabs" role="tablist" aria-label="Категории продукции" aria-orientation="vertical"><button type="button" role="tab" class="cfg__tab" id="cfg-tab-terrace" aria-controls="cfg-panel" aria-selected="true" tabindex="0" data-cfg="terrace" data-href="/terrasy.html" data-title="Системы для террас" data-text="Перголы с выдвижной крышей, биоклиматические системы, гильотинное остекление и ZIP-шторы — для дома, кафе и коммерческих объектов." data-tag="4 системы под задачу" data-img="/public/products/terrasy/pergola-hero" data-alt="Терраса с перголой" data-motion="Ламели крыши поворачиваются"><span class="cfg__no">01</span><span class="cfg__name">Системы для террас</span></button><button type="button" role="tab" class="cfg__tab" id="cfg-tab-profile-al" aria-controls="cfg-panel" aria-selected="false" tabindex="-1" data-cfg="profile-al" data-href="/products/aluminievyy-profil.html" data-title="Алюминиевый профиль" data-text="Поставка и обработка алюминиевого профиля GOLD, ALPROF, GRÜNDER, SCHÜCO для окон, дверей и фасадных конструкций." data-tag="поставка и обработка" data-img="/public/products/hero/profil-temnyy" data-alt="Алюминиевый оконный профиль в разрезе" data-motion="Профиль в разрезе"><span class="cfg__no">02</span><span class="cfg__name">Алюминиевый профиль</span></button><button type="button" role="tab" class="cfg__tab" id="cfg-tab-profile-pvc" aria-controls="cfg-panel" aria-selected="false" tabindex="-1" data-cfg="profile-pvc" data-href="/products/plastikovyy-profil.html" data-title="Пластиковый профиль" data-text="Профиль GRÜNDER, REHAU, SAPA, GOLD, ALPROF, SCHÜCO: резка и ламинация под задачу клиента." data-tag="опт и розница" data-img="/public/products/hero/profil-svetlyy" data-alt="Пластиковый оконный профиль в разрезе" data-motion="Профиль в разрезе"><span class="cfg__no">03</span><span class="cfg__name">Пластиковый профиль</span></button><button type="button" role="tab" class="cfg__tab" id="cfg-tab-hinged" aria-controls="cfg-panel" aria-selected="false" tabindex="-1" data-cfg="hinged" data-href="/products/plastikovye-okna.html" data-title="Пластиковые окна" data-text="Готовые окна ПВХ под ключ: бесплатный замер, изготовление, доставка и монтаж." data-tag="замер · монтаж" data-img="/public/portfolio/besagash-village-full" data-alt="Жилой комплекс с окнами ArJan" data-motion="Створка поворачивается на петле"><span class="cfg__no">04</span><span class="cfg__name">Пластиковые окна</span></button><button type="button" role="tab" class="cfg__tab" id="cfg-tab-door" aria-controls="cfg-panel" aria-selected="false" tabindex="-1" data-cfg="door" data-href="/products/aluminievye-okna-i-dveri.html" data-title="Алюминиевые окна и двери" data-text="Тёплый и холодный алюминий: окна, двери, входные группы для жилых и коммерческих объектов." data-tag="тёплый и холодный алюминий" data-img="/public/portfolio/duo-towers-almaty-full" data-alt="Фасад с алюминиевыми окнами" data-motion="Дверное полотно открывается"><span class="cfg__no">05</span><span class="cfg__name">Алюминиевые окна и двери</span></button><button type="button" role="tab" class="cfg__tab" id="cfg-tab-sliding" aria-controls="cfg-panel" aria-selected="false" tabindex="-1" data-cfg="sliding" data-href="/products/razdvizhnye-sistemy.html" data-title="Раздвижные системы" data-text="Раздвижные и подъёмно-раздвижные конструкции для балконов, лоджий, террас и панорамного остекления." data-tag="алюминий и ПВХ" data-img="/public/portfolio/europolis-almaty-full" data-alt="Панорамное остекление" data-motion="Панель едет по направляющей"><span class="cfg__no">06</span><span class="cfg__name">Раздвижные системы</span></button><button type="button" role="tab" class="cfg__tab" id="cfg-tab-hardware" aria-controls="cfg-panel" aria-selected="false" tabindex="-1" data-cfg="hardware" data-href="/products/furnitura.html" data-title="Оконная и дверная фурнитура" data-text="Фурнитура в комплекте с готовыми окнами и дверями — состав уточняется у менеджера при расчёте." data-tag="в комплекте с конструкцией" data-img="/public/production/assembly-bench-full" data-alt="Сборка окна на производстве ArJan" data-motion="Ручка поворачивается, створка откидывается"><span class="cfg__no">07</span><span class="cfg__name">Оконная и дверная фурнитура</span></button><button type="button" role="tab" class="cfg__tab" id="cfg-tab-glass" aria-controls="cfg-panel" aria-selected="false" tabindex="-1" data-cfg="glass" data-href="/products/steklopakety.html" data-title="Стеклопакеты" data-text="Одно- и двухкамерные стеклопакеты, энергосберегающие и солнцезащитные варианты." data-tag="часть готового окна" data-img="/public/production/finished-stock-full" data-alt="Готовые конструкции со стеклопакетами" data-motion="Стёкла раздвигаются слоями"><span class="cfg__no">08</span><span class="cfg__name">Стеклопакеты</span></button><button type="button" role="tab" class="cfg__tab" id="cfg-tab-parts" aria-controls="cfg-panel" aria-selected="false" tabindex="-1" data-cfg="parts" data-href="/products/komplektuyushchie.html" data-title="Комплектующие" data-text="Сопутствующие комплектующие для оконных и дверных конструкций — ассортимент уточняйте у менеджера." data-tag="под конкретный проём" data-img="/public/production/cutting-machine-full" data-alt="Резка профиля в цехе ArJan" data-motion="Рама раскладывается на элементы"><span class="cfg__no">09</span><span class="cfg__name">Комплектующие</span></button></div>
+      <div class="cfg__tabs" role="tablist" aria-label="Категории продукции" aria-orientation="vertical"><button type="button" role="tab" class="cfg__tab" id="cfg-tab-terrace" aria-controls="cfg-panel" aria-selected="true" tabindex="0" data-cfg="terrace" data-href="terrasy.html" data-title="Системы для террас" data-text="Перголы с выдвижной крышей, биоклиматические системы, гильотинное остекление и ZIP-шторы — для дома, кафе и коммерческих объектов." data-tag="4 системы под задачу" data-img="public/products/terrasy/pergola-hero" data-alt="Терраса с перголой" data-motion="Ламели крыши поворачиваются"><span class="cfg__no">01</span><span class="cfg__name">Системы для террас</span></button><button type="button" role="tab" class="cfg__tab" id="cfg-tab-profile-al" aria-controls="cfg-panel" aria-selected="false" tabindex="-1" data-cfg="profile-al" data-href="products/aluminievyy-profil.html" data-title="Алюминиевый профиль" data-text="Поставка и обработка алюминиевого профиля GOLD, ALPROF, GRÜNDER, SCHÜCO для окон, дверей и фасадных конструкций." data-tag="поставка и обработка" data-img="public/products/hero/profil-temnyy" data-alt="Алюминиевый оконный профиль в разрезе" data-motion="Профиль в разрезе"><span class="cfg__no">02</span><span class="cfg__name">Алюминиевый профиль</span></button><button type="button" role="tab" class="cfg__tab" id="cfg-tab-profile-pvc" aria-controls="cfg-panel" aria-selected="false" tabindex="-1" data-cfg="profile-pvc" data-href="products/plastikovyy-profil.html" data-title="Пластиковый профиль" data-text="Профиль GRÜNDER, REHAU, SAPA, GOLD, ALPROF, SCHÜCO: резка и ламинация под задачу клиента." data-tag="опт и розница" data-img="public/products/hero/profil-svetlyy" data-alt="Пластиковый оконный профиль в разрезе" data-motion="Профиль в разрезе"><span class="cfg__no">03</span><span class="cfg__name">Пластиковый профиль</span></button><button type="button" role="tab" class="cfg__tab" id="cfg-tab-hinged" aria-controls="cfg-panel" aria-selected="false" tabindex="-1" data-cfg="hinged" data-href="products/plastikovye-okna.html" data-title="Пластиковые окна" data-text="Готовые окна ПВХ под ключ: бесплатный замер, изготовление, доставка и монтаж." data-tag="замер · монтаж" data-img="public/portfolio/besagash-village-full" data-alt="Жилой комплекс с окнами ArJan" data-motion="Створка поворачивается на петле"><span class="cfg__no">04</span><span class="cfg__name">Пластиковые окна</span></button><button type="button" role="tab" class="cfg__tab" id="cfg-tab-door" aria-controls="cfg-panel" aria-selected="false" tabindex="-1" data-cfg="door" data-href="products/aluminievye-okna-i-dveri.html" data-title="Алюминиевые окна и двери" data-text="Тёплый и холодный алюминий: окна, двери, входные группы для жилых и коммерческих объектов." data-tag="тёплый и холодный алюминий" data-img="public/portfolio/duo-towers-almaty-full" data-alt="Фасад с алюминиевыми окнами" data-motion="Дверное полотно открывается"><span class="cfg__no">05</span><span class="cfg__name">Алюминиевые окна и двери</span></button><button type="button" role="tab" class="cfg__tab" id="cfg-tab-sliding" aria-controls="cfg-panel" aria-selected="false" tabindex="-1" data-cfg="sliding" data-href="products/razdvizhnye-sistemy.html" data-title="Раздвижные системы" data-text="Раздвижные и подъёмно-раздвижные конструкции для балконов, лоджий, террас и панорамного остекления." data-tag="алюминий и ПВХ" data-img="public/portfolio/europolis-almaty-full" data-alt="Панорамное остекление" data-motion="Панель едет по направляющей"><span class="cfg__no">06</span><span class="cfg__name">Раздвижные системы</span></button><button type="button" role="tab" class="cfg__tab" id="cfg-tab-hardware" aria-controls="cfg-panel" aria-selected="false" tabindex="-1" data-cfg="hardware" data-href="products/furnitura.html" data-title="Оконная и дверная фурнитура" data-text="Фурнитура в комплекте с готовыми окнами и дверями — состав уточняется у менеджера при расчёте." data-tag="в комплекте с конструкцией" data-img="public/production/assembly-bench-full" data-alt="Сборка окна на производстве ArJan" data-motion="Ручка поворачивается, створка откидывается"><span class="cfg__no">07</span><span class="cfg__name">Оконная и дверная фурнитура</span></button><button type="button" role="tab" class="cfg__tab" id="cfg-tab-glass" aria-controls="cfg-panel" aria-selected="false" tabindex="-1" data-cfg="glass" data-href="products/steklopakety.html" data-title="Стеклопакеты" data-text="Одно- и двухкамерные стеклопакеты, энергосберегающие и солнцезащитные варианты." data-tag="часть готового окна" data-img="public/production/finished-stock-full" data-alt="Готовые конструкции со стеклопакетами" data-motion="Стёкла раздвигаются слоями"><span class="cfg__no">08</span><span class="cfg__name">Стеклопакеты</span></button><button type="button" role="tab" class="cfg__tab" id="cfg-tab-parts" aria-controls="cfg-panel" aria-selected="false" tabindex="-1" data-cfg="parts" data-href="products/komplektuyushchie.html" data-title="Комплектующие" data-text="Сопутствующие комплектующие для оконных и дверных конструкций — ассортимент уточняйте у менеджера." data-tag="под конкретный проём" data-img="public/production/cutting-machine-full" data-alt="Резка профиля в цехе ArJan" data-motion="Рама раскладывается на элементы"><span class="cfg__no">09</span><span class="cfg__name">Комплектующие</span></button></div>
       <div class="cfg__stage">
         <div class="rig" data-config="terrace" aria-hidden="true">
-          <div class="rig__view"><img class="rig__img is-on" src="/public/products/terrasy/pergola-hero.jpg" alt="" width="1200" height="800"><img class="rig__img" src="" alt="" width="1200" height="800"></div>
-          <div class="rig__profile"><img src="/public/products/hero/profil-temnyy.png" alt="" width="600" height="600" loading="lazy"></div>
+          <div class="rig__view"><img class="rig__img is-on" src="public/products/terrasy/pergola-hero.jpg" alt="" width="1200" height="800"><img class="rig__img" alt="" width="1200" height="800"></div>
+          <div class="rig__profile"><img src="public/products/hero/profil-temnyy.png" alt="" width="600" height="600" loading="lazy"></div>
           <div class="rig__louvres"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
           <div class="rig__track"></div>
           <div class="rig__fixed"><span class="rig__glass"></span></div>
@@ -249,50 +245,41 @@
         <h3 class="h3" id="cfg-title">Системы для террас</h3>
         <p id="cfg-text">Перголы с выдвижной крышей, биоклиматические системы, гильотинное остекление и ZIP-шторы — для дома, кафе и коммерческих объектов.</p>
         <span class="tag" id="cfg-tag">4 системы под задачу</span>
-        <a class="btn btn--sun" id="cfg-link" href="/terrasy.html">Подробнее о категории</a>
+        <a class="btn btn--sun" id="cfg-link" href="terrasy.html">Подробнее о категории</a>
       </div>
     </div>
-    <nav class="cfg__all" aria-label="Все категории продукции"><span>Все категории:</span><a href="/terrasy.html">Системы для террас</a><a href="/products/aluminievyy-profil.html">Алюминиевый профиль</a><a href="/products/plastikovyy-profil.html">Пластиковый профиль</a><a href="/products/plastikovye-okna.html">Пластиковые окна</a><a href="/products/aluminievye-okna-i-dveri.html">Алюминиевые окна и двери</a><a href="/products/razdvizhnye-sistemy.html">Раздвижные системы</a><a href="/products/furnitura.html">Оконная и дверная фурнитура</a><a href="/products/steklopakety.html">Стеклопакеты</a><a href="/products/komplektuyushchie.html">Комплектующие</a></nav>
+    <nav class="cfg__all" aria-label="Все категории продукции"><span>Все категории:</span><a href="terrasy.html">Системы для террас</a><a href="products/aluminievyy-profil.html">Алюминиевый профиль</a><a href="products/plastikovyy-profil.html">Пластиковый профиль</a><a href="products/plastikovye-okna.html">Пластиковые окна</a><a href="products/aluminievye-okna-i-dveri.html">Алюминиевые окна и двери</a><a href="products/razdvizhnye-sistemy.html">Раздвижные системы</a><a href="products/furnitura.html">Оконная и дверная фурнитура</a><a href="products/steklopakety.html">Стеклопакеты</a><a href="products/komplektuyushchie.html">Комплектующие</a></nav>
   </div>
 </section>
 
-<!-- production: рама раскрывает фото при прокрутке -->
-<section class="sec sec--ink prod" id="production" aria-labelledby="production-h">
+<!-- production: bento, рама раскрывает фото при прокрутке -->
+<section class="sec prod" id="production" aria-labelledby="production-h">
   <div class="wrap">
     <div class="head" data-rise>
       <div class="head__t"><span class="label"><b>02</b> Наше производство</span><h2 class="h2" id="production-h">Обработка профиля и сборка на собственной площадке</h2></div>
       <div class="head__a"><p class="lead">ArJan поставляет алюминиевый и пластиковый профиль ведущих брендов и собирает из него готовые окна, двери и раздвижные конструкции на собственной производственной площадке в Алматы — резка, обработка, сборка и контроль качества перед доставкой и монтажом.</p></div>
     </div>
-  </div>
-  <div class="reveal" data-reveal>
-    <div class="reveal__img"><picture><source srcset="/public/production/worker-arjan-logo-full.webp" type="image/webp"><img src="/public/production/worker-arjan-logo-full.jpg" alt="Сотрудник ArJan с оконной рамой на собственном производстве в Алматы" loading="lazy" width="1400" height="788"></picture></div>
+    <div class="bento">
+      <div class="bcard bcard--reveal"><div class="reveal" data-reveal>
+    <div class="reveal__img"><picture><source srcset="public/production/worker-arjan-logo-full.webp" type="image/webp"><img src="public/production/worker-arjan-logo-full.jpg" alt="Сотрудник ArJan с оконной рамой на собственном производстве в Алматы" loading="lazy" width="1400" height="788"></picture></div>
     <div class="reveal__frame" aria-hidden="true"><i class="reveal__m reveal__m--1"></i><i class="reveal__m reveal__m--2"></i><i class="reveal__t"></i></div>
-  </div>
-  <div class="wrap">
-    <div class="prod__grid">
-      <div class="proof-list">
-        <div class="proof-card"><div class="n">2 500<span> м²</span></div><div class="d">производственная площадка в Алматы</div></div>
-        <div class="proof-card"><div class="n">20<span>+ лет</span></div><div class="d">на оконном рынке Казахстана</div></div>
-        <div class="proof-card"><div class="n">1000<span>+</span></div><div class="d">реализованных проектов</div></div>
-        <div class="proof-card"><div class="n">5<span> брендов</span></div><div class="d">профиля: GOLD, ALPROF, GRÜNDER, REHAU, SAPA</div></div>
-      </div>
-      <div class="prod__side">
-        <div class="pane prod__video"><div class="pane__in" data-inline-video data-src="/public/videos/web/proizvodstvo-2.mp4" data-poster="/public/videos/posters/proizvodstvo-2-poster.jpg">
-          <div class="video-poster" aria-hidden="true"><img src="/public/videos/posters/proizvodstvo-2-poster.jpg" alt="Видео производства ArJan — сборка оконной конструкции" loading="lazy" width="800" height="800"></div>
-        </div></div>
-        <div class="actions">
-          <a href="/production.html" class="btn btn--sun">Смотреть производство</a>
+  </div></div>
+      <div class="bcard bcard--stat"><div class="n">2 500<span> м²</span></div><div class="d">производственная площадка в Алматы</div></div><div class="bcard bcard--stat"><div class="n">20<span>+ лет</span></div><div class="d">на оконном рынке Казахстана</div></div><div class="bcard bcard--stat"><div class="n">1000<span>+</span></div><div class="d">реализованных проектов</div></div><div class="bcard bcard--stat"><div class="n">5<span> брендов</span></div><div class="d">профиля: GOLD, ALPROF, GRÜNDER, REHAU, SAPA</div></div>
+      <div class="bcard bcard--video"><div class="prod__video"><div class="pane__in" data-inline-video data-src="public/videos/web/proizvodstvo-2.mp4" data-poster="public/videos/posters/proizvodstvo-2-poster.jpg">
+          <div class="video-poster" aria-hidden="true"><img src="public/videos/posters/proizvodstvo-2-poster.jpg" alt="Видео производства ArJan — сборка оконной конструкции" loading="lazy" width="800" height="800"></div>
+        </div></div></div>
+      <div class="bcard bcard--cta on-dark"><span class="bcard__ico" aria-hidden="true"></span><div class="actions">
+          <a href="production.html" class="btn btn--sun">Смотреть производство</a>
           <a href="https://wa.me/77088005929?text=Здравствуйте!%20Хочу%20узнать%20подробнее%20о%20производстве%20ArJan" class="btn btn--wa" target="_blank" rel="noopener">Написать в WhatsApp</a>
-        </div>
-      </div>
+        </div></div>
     </div>
     <div class="shots">
-      <div class="pshot"><picture><source srcset="/public/production/assembly-bench-thumb.webp" type="image/webp"><img src="/public/production/assembly-bench-thumb.jpg" alt="Сборка оконной конструкции на производстве ArJan" loading="lazy" width="480" height="360"></picture></div>
-      <div class="pshot"><picture><source srcset="/public/production/finished-stock-thumb.webp" type="image/webp"><img src="/public/production/finished-stock-thumb.jpg" alt="Готовые конструкции на складе ArJan" loading="lazy" width="480" height="360"></picture></div>
-      <div class="pshot"><picture><source srcset="/public/production/plastic-workshop-thumb.webp" type="image/webp"><img src="/public/production/plastic-workshop-thumb.jpg" alt="Обработка пластикового профиля на производстве ArJan" loading="lazy" width="480" height="360"></picture></div>
-      <div class="pshot"><picture><source srcset="/public/production/delivery-truck-thumb.webp" type="image/webp"><img src="/public/production/delivery-truck-thumb.jpg" alt="Доставка готовой продукции ArJan" loading="lazy" width="480" height="360"></picture></div>
+      <div class="pshot"><picture><source srcset="public/production/assembly-bench-thumb.webp" type="image/webp"><img src="public/production/assembly-bench-thumb.jpg" alt="Сборка оконной конструкции на производстве ArJan" loading="lazy" width="480" height="360"></picture></div>
+      <div class="pshot"><picture><source srcset="public/production/finished-stock-thumb.webp" type="image/webp"><img src="public/production/finished-stock-thumb.jpg" alt="Готовые конструкции на складе ArJan" loading="lazy" width="480" height="360"></picture></div>
+      <div class="pshot"><picture><source srcset="public/production/plastic-workshop-thumb.webp" type="image/webp"><img src="public/production/plastic-workshop-thumb.jpg" alt="Обработка пластикового профиля на производстве ArJan" loading="lazy" width="480" height="360"></picture></div>
+      <div class="pshot"><picture><source srcset="public/production/delivery-truck-thumb.webp" type="image/webp"><img src="public/production/delivery-truck-thumb.jpg" alt="Доставка готовой продукции ArJan" loading="lazy" width="480" height="360"></picture></div>
     </div>
-    <a href="/production.html" class="textlink">Смотреть все фото производства <span aria-hidden="true">→</span></a>
+    <a href="production.html" class="textlink">Смотреть все фото производства <span aria-hidden="true">→</span></a>
   </div>
 </section>
 
@@ -365,34 +352,34 @@
     <div class="head" data-rise>
       <div class="head__t"><span class="label"><b>04</b> Объекты</span><h2 class="h2" id="cases-h">Реальные работы ArJan</h2></div>
       <div class="head__a"><p class="lead">Жилые комплексы в Алматы и области, где использованы оконные и дверные профили ArJan — с застройщиком и адресом объекта.</p>
-        <div class="rail__nav"><button type="button" class="rail__btn" data-rail-prev aria-label="Предыдущие объекты"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button type="button" class="rail__btn" data-rail-next aria-label="Следующие объекты"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button><a href="/portfolio.html" class="btn btn--ghost">Смотреть все объекты</a></div>
+        <div class="rail__nav"><button type="button" class="rail__btn" data-rail-prev aria-label="Предыдущие объекты"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button type="button" class="rail__btn" data-rail-next aria-label="Следующие объекты"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button><a href="portfolio.html" class="btn btn--ghost">Смотреть все объекты</a></div>
       </div>
     </div>
   </div>
   <div class="rail" data-rail>
     <ul class="rail__list" tabindex="0" aria-label="Объекты, листайте в сторону">
-      <li class="rail__item"><a href="/portfolio.html" class="obj">
-        <span class="pane obj__ph"><span class="pane__in"><picture><source srcset="/public/portfolio/besagash-village-full.webp" type="image/webp"><img src="/public/portfolio/besagash-village-full.jpg" alt="«Besagash Village», Талгарский район — фасад здания" loading="lazy" width="760" height="575"></picture></span></span>
+      <li class="rail__item"><a href="portfolio.html" class="obj">
+        <span class="pane obj__ph"><span class="pane__in"><picture><source srcset="public/portfolio/besagash-village-full.webp" type="image/webp"><img src="public/portfolio/besagash-village-full.jpg" alt="«Besagash Village», Талгарский район — фасад здания" loading="lazy" width="760" height="575"></picture></span></span>
         <span class="obj__body"><span class="obj__city">Алматинская область</span><span class="obj__title">«Besagash Village»</span><span class="obj__meta"><span>Застройщик: ЖК INVEST</span><span>с. Бесагаш, Талгарский район, Алматинская область</span><span>Объект с использованием оконных и дверных профилей</span></span></span>
       </a></li>
-      <li class="rail__item"><a href="/portfolio.html" class="obj">
-        <span class="pane obj__ph"><span class="pane__in"><picture><source srcset="/public/portfolio/akkent-almaty-full.webp" type="image/webp"><img src="/public/portfolio/akkent-almaty-full.jpg" alt="ЖК «Аккент», Алматы — фасад здания" loading="lazy" width="760" height="577"></picture></span></span>
+      <li class="rail__item"><a href="portfolio.html" class="obj">
+        <span class="pane obj__ph"><span class="pane__in"><picture><source srcset="public/portfolio/akkent-almaty-full.webp" type="image/webp"><img src="public/portfolio/akkent-almaty-full.jpg" alt="ЖК «Аккент», Алматы — фасад здания" loading="lazy" width="760" height="577"></picture></span></span>
         <span class="obj__body"><span class="obj__city">Алматы</span><span class="obj__title">ЖК «Аккент»</span><span class="obj__meta"><span>Застройщик: ТОО «Айт Курылыс Сауда»</span><span>Алматы, Алатауский район, микрорайон «Аккент», 6А</span><span>Объект с использованием оконных и дверных профилей</span></span></span>
       </a></li>
-      <li class="rail__item"><a href="/portfolio.html" class="obj">
-        <span class="pane obj__ph"><span class="pane__in"><picture><source srcset="/public/portfolio/nest-grand-almaty-full.webp" type="image/webp"><img src="/public/portfolio/nest-grand-almaty-full.jpg" alt="ЖК «Nest Grand», Алматы — двор жилого комплекса" loading="lazy" width="760" height="577"></picture></span></span>
+      <li class="rail__item"><a href="portfolio.html" class="obj">
+        <span class="pane obj__ph"><span class="pane__in"><picture><source srcset="public/portfolio/nest-grand-almaty-full.webp" type="image/webp"><img src="public/portfolio/nest-grand-almaty-full.jpg" alt="ЖК «Nest Grand», Алматы — двор жилого комплекса" loading="lazy" width="760" height="577"></picture></span></span>
         <span class="obj__body"><span class="obj__city">Алматы</span><span class="obj__title">ЖК «Nest Grand»</span><span class="obj__meta"><span>Застройщик: ТОО Middleman</span><span>Алматы, Ауэзовский район, микрорайон Астана</span><span>Объект с использованием оконных и дверных профилей</span></span></span>
       </a></li>
-      <li class="rail__item"><a href="/portfolio.html" class="obj">
-        <span class="pane obj__ph"><span class="pane__in"><picture><source srcset="/public/portfolio/europolis-almaty-full.webp" type="image/webp"><img src="/public/portfolio/europolis-almaty-full.jpg" alt="ЖК «Европолис», Алматы — фасад здания" loading="lazy" width="760" height="587"></picture></span></span>
+      <li class="rail__item"><a href="portfolio.html" class="obj">
+        <span class="pane obj__ph"><span class="pane__in"><picture><source srcset="public/portfolio/europolis-almaty-full.webp" type="image/webp"><img src="public/portfolio/europolis-almaty-full.jpg" alt="ЖК «Европолис», Алматы — фасад здания" loading="lazy" width="760" height="587"></picture></span></span>
         <span class="obj__body"><span class="obj__city">Алматы</span><span class="obj__title">ЖК «Европолис»</span><span class="obj__meta"><span>Застройщик: «Европолис»</span><span>Алматы, ул. Жамал Омаровой, 33</span><span>Объект с использованием оконных и дверных профилей</span></span></span>
       </a></li>
-      <li class="rail__item"><a href="/portfolio.html" class="obj">
-        <span class="pane obj__ph"><span class="pane__in"><picture><source srcset="/public/portfolio/sky-hills-almaty-full.webp" type="image/webp"><img src="/public/portfolio/sky-hills-almaty-full.jpg" alt="ЖК «Sky Hills», Алматы — фасад здания" loading="lazy" width="640" height="400"></picture></span></span>
+      <li class="rail__item"><a href="portfolio.html" class="obj">
+        <span class="pane obj__ph"><span class="pane__in"><picture><source srcset="public/portfolio/sky-hills-almaty-full.webp" type="image/webp"><img src="public/portfolio/sky-hills-almaty-full.jpg" alt="ЖК «Sky Hills», Алматы — фасад здания" loading="lazy" width="640" height="400"></picture></span></span>
         <span class="obj__body"><span class="obj__city">Алматы</span><span class="obj__title">ЖК «Sky Hills»</span><span class="obj__meta"><span>Застройщик: ТОО «МТС Компани ЛТД»</span><span>Алматы, ул. Какимбека Салыкова, 132/2</span><span>Объект с использованием оконных и дверных профилей</span></span></span>
       </a></li>
-      <li class="rail__item"><a href="/portfolio.html" class="obj">
-        <span class="pane obj__ph"><span class="pane__in"><picture><source srcset="/public/portfolio/arbat-almaty-1-full.webp" type="image/webp"><img src="/public/portfolio/arbat-almaty-1-full.jpg" alt="ЖК «Arbat», Алматы — фасад здания" loading="lazy" width="640" height="400"></picture></span></span>
+      <li class="rail__item"><a href="portfolio.html" class="obj">
+        <span class="pane obj__ph"><span class="pane__in"><picture><source srcset="public/portfolio/arbat-almaty-1-full.webp" type="image/webp"><img src="public/portfolio/arbat-almaty-1-full.jpg" alt="ЖК «Arbat», Алматы — фасад здания" loading="lazy" width="640" height="400"></picture></span></span>
         <span class="obj__body"><span class="obj__city">Алматы</span><span class="obj__title">ЖК «Arbat»</span><span class="obj__meta"><span>Застройщик: Nest Stroy</span><span>Алматы, ул. Наурызбай батыра, 50</span><span>Объект с использованием оконных и дверных профилей</span></span></span>
       </a></li>
     </ul>
@@ -401,32 +388,15 @@
   <div class="wrap">
     <div class="partners">
       <div class="partners__head"><span class="label">Нам доверяют</span><h2 class="h3">Застройщики и партнёры ArJan</h2></div>
-      <div class="partner-block">
-        <h3 class="partner-block-title">Застройщики</h3>
-        <div class="partner-logos">
-          <div class="plogo"><picture><source srcset="/public/branding/partners/nest-stroy.webp" type="image/webp"><img src="/public/branding/partners/nest-stroy.png" alt="Nest Stroy" loading="lazy" width="120" height="75"></picture></div>
-          <div class="plogo"><picture><source srcset="/public/branding/partners/exclusive-qurylys.webp" type="image/webp"><img src="/public/branding/partners/exclusive-qurylys.png" alt="Exclusive Qurylys" loading="lazy" width="120" height="97"></picture></div>
-          <div class="plogo"><picture><source srcset="/public/branding/partners/medina-developments.webp" type="image/webp"><img src="/public/branding/partners/medina-developments.png" alt="Medina Developments" loading="lazy" width="120" height="95"></picture></div>
-          <div class="plogo"><picture><source srcset="/public/branding/partners/rams-qazaqstan.webp" type="image/webp"><img src="/public/branding/partners/rams-qazaqstan.png" alt="Rams Qazaqstan" loading="lazy" width="120" height="50"></picture></div>
-          <div class="plogo"><picture><source srcset="/public/branding/partners/mts-company.webp" type="image/webp"><img src="/public/branding/partners/mts-company.png" alt="MTS Company Ltd" loading="lazy" width="120" height="102"></picture></div>
-          <div class="plogo"><picture><source srcset="/public/branding/partners/k7-group.webp" type="image/webp"><img src="/public/branding/partners/k7-group.png" alt="K7 Group" loading="lazy" width="120" height="72"></picture></div>
-          <div class="plogo"><picture><source srcset="/public/branding/partners/akas.webp" type="image/webp"><img src="/public/branding/partners/akas.png" alt="AKAS" loading="lazy" width="120" height="79"></picture></div>
-          <div class="plogo"><picture><source srcset="/public/branding/partners/tau-development.webp" type="image/webp"><img src="/public/branding/partners/tau-development.png" alt="Tau Development" loading="lazy" width="120" height="73"></picture></div>
-        </div>
+      <div class="marq">
+        <h3 class="marq__title">Застройщики</h3>
+        <div class="marq__view"><div class="marq__track"><div class="marq__set"><div class="plogo"><picture><source srcset="public/branding/partners/nest-stroy.webp" type="image/webp"><img src="public/branding/partners/nest-stroy.png" alt="Nest Stroy" loading="lazy" width="120" height="75"></picture></div><div class="plogo"><picture><source srcset="public/branding/partners/exclusive-qurylys.webp" type="image/webp"><img src="public/branding/partners/exclusive-qurylys.png" alt="Exclusive Qurylys" loading="lazy" width="120" height="97"></picture></div><div class="plogo"><picture><source srcset="public/branding/partners/medina-developments.webp" type="image/webp"><img src="public/branding/partners/medina-developments.png" alt="Medina Developments" loading="lazy" width="120" height="95"></picture></div><div class="plogo"><picture><source srcset="public/branding/partners/rams-qazaqstan.webp" type="image/webp"><img src="public/branding/partners/rams-qazaqstan.png" alt="Rams Qazaqstan" loading="lazy" width="120" height="50"></picture></div><div class="plogo"><picture><source srcset="public/branding/partners/mts-company.webp" type="image/webp"><img src="public/branding/partners/mts-company.png" alt="MTS Company Ltd" loading="lazy" width="120" height="102"></picture></div><div class="plogo"><picture><source srcset="public/branding/partners/k7-group.webp" type="image/webp"><img src="public/branding/partners/k7-group.png" alt="K7 Group" loading="lazy" width="120" height="72"></picture></div><div class="plogo"><picture><source srcset="public/branding/partners/akas.webp" type="image/webp"><img src="public/branding/partners/akas.png" alt="AKAS" loading="lazy" width="120" height="79"></picture></div></div><div class="marq__set" aria-hidden="true"><div class="plogo"><picture><source srcset="public/branding/partners/nest-stroy.webp" type="image/webp"><img src="public/branding/partners/nest-stroy.png" alt="Nest Stroy" loading="lazy" width="120" height="75"></picture></div><div class="plogo"><picture><source srcset="public/branding/partners/exclusive-qurylys.webp" type="image/webp"><img src="public/branding/partners/exclusive-qurylys.png" alt="Exclusive Qurylys" loading="lazy" width="120" height="97"></picture></div><div class="plogo"><picture><source srcset="public/branding/partners/medina-developments.webp" type="image/webp"><img src="public/branding/partners/medina-developments.png" alt="Medina Developments" loading="lazy" width="120" height="95"></picture></div><div class="plogo"><picture><source srcset="public/branding/partners/rams-qazaqstan.webp" type="image/webp"><img src="public/branding/partners/rams-qazaqstan.png" alt="Rams Qazaqstan" loading="lazy" width="120" height="50"></picture></div><div class="plogo"><picture><source srcset="public/branding/partners/mts-company.webp" type="image/webp"><img src="public/branding/partners/mts-company.png" alt="MTS Company Ltd" loading="lazy" width="120" height="102"></picture></div><div class="plogo"><picture><source srcset="public/branding/partners/k7-group.webp" type="image/webp"><img src="public/branding/partners/k7-group.png" alt="K7 Group" loading="lazy" width="120" height="72"></picture></div><div class="plogo"><picture><source srcset="public/branding/partners/akas.webp" type="image/webp"><img src="public/branding/partners/akas.png" alt="AKAS" loading="lazy" width="120" height="79"></picture></div></div></div></div>
       </div>
-      <div class="partner-block">
-        <h3 class="partner-block-title">Бренды и поставщики материалов</h3>
-        <div class="partner-logos">
-          <div class="plogo"><picture><source srcset="/public/branding/partners/gold.webp" type="image/webp"><img src="/public/branding/partners/gold.png" alt="Gold Aluminium Kazakhstan" loading="lazy" width="120" height="57"></picture></div>
-          <div class="plogo"><picture><source srcset="/public/branding/partners/alprof.webp" type="image/webp"><img src="/public/branding/partners/alprof.png" alt="Alprof" loading="lazy" width="120" height="89"></picture></div>
-          <div class="plogo"><picture><source srcset="/public/branding/partners/grunder.webp" type="image/webp"><img src="/public/branding/partners/grunder.png" alt="Gründer Fenster. Meister." loading="lazy" width="120" height="73"></picture></div>
-          <div class="plogo"><picture><source srcset="/public/branding/partners/akpen.webp" type="image/webp"><img src="/public/branding/partners/akpen.png" alt="Akpen" loading="lazy" width="120" height="63"></picture></div>
-          <div class="plogo"><picture><source srcset="/public/branding/partners/tytan.webp" type="image/webp"><img src="/public/branding/partners/tytan.png" alt="Tytan Professional" loading="lazy" width="120" height="72"></picture></div>
-          <div class="plogo"><picture><source srcset="/public/branding/partners/schuco.webp" type="image/webp"><img src="/public/branding/partners/schuco.png" alt="Schüco" loading="lazy" width="120" height="120"></picture></div>
-          <div class="plogo plogo--text"><span>А также REHAU, SAPA.</span></div>
-        </div>
+      <div class="marq marq--rev">
+        <h3 class="marq__title">Бренды и поставщики материалов</h3>
+        <div class="marq__view"><div class="marq__track"><div class="marq__set"><div class="plogo"><picture><source srcset="public/branding/partners/gold.webp" type="image/webp"><img src="public/branding/partners/gold.png" alt="Gold Aluminium Kazakhstan" loading="lazy" width="120" height="57"></picture></div><div class="plogo"><picture><source srcset="public/branding/partners/alprof.webp" type="image/webp"><img src="public/branding/partners/alprof.png" alt="Alprof" loading="lazy" width="120" height="89"></picture></div><div class="plogo"><picture><source srcset="public/branding/partners/grunder.webp" type="image/webp"><img src="public/branding/partners/grunder.png" alt="Gründer Fenster. Meister." loading="lazy" width="120" height="73"></picture></div><div class="plogo"><picture><source srcset="public/branding/partners/akpen.webp" type="image/webp"><img src="public/branding/partners/akpen.png" alt="Akpen" loading="lazy" width="120" height="63"></picture></div><div class="plogo"><picture><source srcset="public/branding/partners/tytan.webp" type="image/webp"><img src="public/branding/partners/tytan.png" alt="Tytan Professional" loading="lazy" width="120" height="72"></picture></div><div class="plogo"><picture><source srcset="public/branding/partners/schuco.webp" type="image/webp"><img src="public/branding/partners/schuco.png" alt="Schüco" loading="lazy" width="120" height="120"></picture></div></div><div class="marq__set" aria-hidden="true"><div class="plogo"><picture><source srcset="public/branding/partners/gold.webp" type="image/webp"><img src="public/branding/partners/gold.png" alt="Gold Aluminium Kazakhstan" loading="lazy" width="120" height="57"></picture></div><div class="plogo"><picture><source srcset="public/branding/partners/alprof.webp" type="image/webp"><img src="public/branding/partners/alprof.png" alt="Alprof" loading="lazy" width="120" height="89"></picture></div><div class="plogo"><picture><source srcset="public/branding/partners/grunder.webp" type="image/webp"><img src="public/branding/partners/grunder.png" alt="Gründer Fenster. Meister." loading="lazy" width="120" height="73"></picture></div><div class="plogo"><picture><source srcset="public/branding/partners/akpen.webp" type="image/webp"><img src="public/branding/partners/akpen.png" alt="Akpen" loading="lazy" width="120" height="63"></picture></div><div class="plogo"><picture><source srcset="public/branding/partners/tytan.webp" type="image/webp"><img src="public/branding/partners/tytan.png" alt="Tytan Professional" loading="lazy" width="120" height="72"></picture></div><div class="plogo"><picture><source srcset="public/branding/partners/schuco.webp" type="image/webp"><img src="public/branding/partners/schuco.png" alt="Schüco" loading="lazy" width="120" height="120"></picture></div></div></div></div>
       </div>
-    </div>
+      </div>
   </div>
 </section>
 
@@ -473,9 +443,15 @@
 
 <!-- FAQ -->
 <section class="sec" id="faq" aria-labelledby="faq-h">
-  <div class="wrap faq-wrap">
-    <div class="head head--center" data-rise>
-      <div class="head__t"><span class="label"><b>07</b> Вопросы и ответы</span><h2 class="h2" id="faq-h">Часто задаваемые вопросы</h2></div>
+  <div class="wrap faqx">
+    <div class="faqx__side">
+      <div class="head__t" data-rise><span class="label"><b>07</b> Вопросы и ответы</span><h2 class="h2" id="faq-h">Часто задаваемые вопросы</h2></div>
+      <div class="faqx__card on-dark">
+        <h3 class="h3">Есть вопросы?</h3>
+        <p>Задайте их менеджеру!</p>
+        <a href="https://wa.me/77088005929" target="_blank" rel="noopener" class="btn btn--sun btn--block">Написать в WhatsApp</a>
+        <a href="tel:+77088005929" class="btn btn--glass btn--block">8 (708) 800-59-29</a>
+      </div>
     </div>
     <div class="faq">
       <div class="qa"><h3><button aria-expanded="false"><span class="q">Что производит и поставляет ArJan?</span><span class="ico"></span></button></h3><div class="ans"><p>ArJan поставляет алюминиевый и пластиковый профиль ведущих брендов, обрабатывает его на собственной площадке в Алматы и изготавливает готовые окна, двери и раздвижные конструкции.</p></div></div>
@@ -556,7 +532,7 @@ var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
 <footer class="foot on-dark">
   <div class="wrap">
     <div class="foot__top">
-      <a href="/" class="logo" aria-label="ArJan — на главную"><img src="/public/branding/logo-light.png" alt="" width="148" height="56" loading="lazy" decoding="async"></a>
+      <a href="index.html" class="logo" aria-label="ArJan — на главную"><img src="public/branding/logo-light.png" alt="" width="148" height="56" loading="lazy" decoding="async"></a>
       <p class="foot__motto" aria-hidden="true">Слово <span>в срок.</span></p>
     </div>
     <div class="foot__grid">
@@ -566,33 +542,33 @@ var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
       </div>
       <nav class="fcol" aria-label="Продукция">
         <h2 class="fh">Продукция</h2>
-        <a href="/terrasy.html">Системы для террас</a>
-        <a href="/products/aluminievyy-profil.html">Алюминиевый профиль</a>
-        <a href="/products/plastikovyy-profil.html">Пластиковый профиль</a>
-        <a href="/products/plastikovye-okna.html">Пластиковые окна</a>
-        <a href="/products/aluminievye-okna-i-dveri.html">Алюминиевые окна и двери</a>
-        <a href="/products/razdvizhnye-sistemy.html">Раздвижные системы</a>
+        <a href="terrasy.html">Системы для террас</a>
+        <a href="products/aluminievyy-profil.html">Алюминиевый профиль</a>
+        <a href="products/plastikovyy-profil.html">Пластиковый профиль</a>
+        <a href="products/plastikovye-okna.html">Пластиковые окна</a>
+        <a href="products/aluminievye-okna-i-dveri.html">Алюминиевые окна и двери</a>
+        <a href="products/razdvizhnye-sistemy.html">Раздвижные системы</a>
       </nav>
       <nav class="fcol" aria-label="Компания">
         <h2 class="fh">Компания</h2>
-        <a href="/production.html">Производство</a>
-        <a href="/developers.html">Для бизнеса</a>
-        <a href="/portfolio.html">Объекты</a>
-        <a href="/#geo">География</a>
-        <a href="/#faq">Вопросы</a>
-        <a href="/privacy.html">Политика конфиденциальности</a>
+        <a href="production.html">Производство</a>
+        <a href="developers.html">Для бизнеса</a>
+        <a href="portfolio.html">Объекты</a>
+        <a href="index.html#geo">География</a>
+        <a href="index.html#faq">Вопросы</a>
+        <a href="privacy.html">Политика конфиденциальности</a>
       </nav>
       <div class="fcol">
         <h2 class="fh">Контакты</h2>
         <a href="tel:+77088005929" class="foot__phone">8 (708) 800-59-29</a>
         <a href="https://wa.me/77088005929" target="_blank" rel="noopener">WhatsApp</a>
-        <a href="/#contacts">г. Алматы, ул. Казыбаева, 12Б/1</a>
-        <a href="/#contacts">Пн–Пт 9:00–18:00, Сб 9:00–13:00</a>
+        <a href="index.html#contacts">г. Алматы, ул. Казыбаева, 12Б/1</a>
+        <a href="index.html#contacts">Пн–Пт 9:00–18:00, Сб 9:00–13:00</a>
       </div>
     </div>
     <div class="copyright">
       <span>© 2003–2026 ArJan. Поставка профиля, окна, двери и раздвижные системы. Алматы · Атырау · Актау.</span>
-      <a href="/privacy.html">Политика конфиденциальности</a>
+      <a href="privacy.html">Политика конфиденциальности</a>
     </div>
   </div>
 </footer>
@@ -611,7 +587,7 @@ var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
     <button class="wa-close" aria-label="Закрыть"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
   </div>
   <div class="wa-branch-list" data-wa-branches></div>
-  <a href="https://wa.me/77088005929" id="waOpenBtn" class="btn btn--sun btn--block" target="_blank" rel="noopener">Открыть WhatsApp →</a>
+  <a href="https://wa.me/77088005929" id="waOpenBtn" class="btn btn--sun btn--block" target="_blank" rel="noopener">Открыть WhatsApp</a>
 </div>
 
 <!-- video modal -->
@@ -622,8 +598,8 @@ var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
   </div>
 </div>
 
-<script src="/assets/js/site-data.js?v=20260929"></script>
-<script src="/assets/js/main.js?v=20260929"></script>
-<script src="/assets/js/calc.js?v=20261104"></script>
+<script src="assets/js/site-data.js?v=20260929"></script>
+<script src="assets/js/main.js?v=20260929"></script>
+<script src="assets/js/calc.js?v=20261104"></script>
 </body>
 </html>

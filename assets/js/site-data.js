@@ -348,3 +348,14 @@ window.ARJAN_VIDEOS = [
 /* быстрый доступ по slug */
 window.ARJAN_PRODUCT_BY_SLUG = {};
 window.ARJAN_PRODUCTS.forEach(function (p) { window.ARJAN_PRODUCT_BY_SLUG[p.slug] = p; });
+
+/* относительные пути: сайт работает и на хостинге, и при открытии файла двойным кликом */
+(function () {
+  var s = document.currentScript && document.currentScript.src;
+  var base = s ? s.replace(/assets\/js\/site-data\.js.*$/, '') : '/';
+  window.ARJAN_BASE = base;
+  window.ARJAN_VIDEOS.forEach(function (v) {
+    v.src = base + v.src.replace(/^\//, '');
+    v.poster = base + v.poster.replace(/^\//, '');
+  });
+})();

@@ -55,6 +55,8 @@
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && mm && mm.classList.contains('open')) { burger.click(); burger.focus(); }
     });
+    var mmb = document.querySelector('.mm-backdrop');
+    if (mmb && burger) mmb.addEventListener('click', function () { if (mm.classList.contains('open')) burger.click(); });
     var hdr = document.querySelector('header.nav');
     if (hdr) {
       var onScroll = function () { hdr.classList.toggle('scrolled', window.scrollY > 10); };
