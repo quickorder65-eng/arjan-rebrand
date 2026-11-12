@@ -16,9 +16,9 @@
 <meta property="og:image" content="https://arjan.kz/public/branding/og-default.jpg">
 <link rel="icon" type="image/png" sizes="32x32" href="/public/branding/favicon-32.png">
 <link rel="apple-touch-icon" href="/public/branding/apple-touch-icon.png">
-<link rel="preload" href="/assets/fonts/rubik-cyrillic-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/rubik-cyrillic-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/golos-text-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/style.css?v=20261111">
+<link rel="stylesheet" href="/assets/css/style.css?v=20261112">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
 {
@@ -66,9 +66,9 @@
       <a href="tel:+77088005929" class="nav-phone">8 (708) 800-59-29</a>
       <a href="/#contacts" class="btn btn--sun">Оставить заявку</a>
     </div>
-    <button class="burger" aria-label="Меню" aria-expanded="false" aria-controls="mobileMenu" id="burger"><span></span><span></span><span></span></button>
+    <button class="burger" aria-expanded="false" aria-controls="mobileMenu" id="burger"><span class="burger__ico" aria-hidden="true"><span></span><span></span><span></span></span>Меню</button>
   </div>
-  <div class="mobile-menu on-ink" id="mobileMenu">
+  <div class="mobile-menu on-dark" id="mobileMenu">
     <nav class="mm-links" aria-label="Мобильная навигация">
       <a href="/developers.html"><span class="mm-no">01</span>Для бизнеса</a>
       <a href="/#products"><span class="mm-no">02</span>Продукция</a>
@@ -84,33 +84,34 @@
       <a href="https://wa.me/77088005929" target="_blank" rel="noopener" class="btn btn--wa btn--block mm-wa">Написать в WhatsApp</a>
     </div>
   </div>
+  <div class="mm-backdrop" aria-hidden="true"></div>
 </header>
 
 <main id="main">
 
 
-<section class="phead">
+<section class="phead on-dark">
 <div class="wrap">
 <nav aria-label="Хлебные крошки" class="crumbs">
 <a href="/">Главная</a><span class="sep">/</span><span class="cur">Объекты</span>
 </nav>
 <div class="phead__grid">
-<div class="phead__text"><span class="eyebrow">Объекты</span><h1 class="h-xl">Проекты с продукцией ArJan</h1><p class="lead">Жилые комплексы и коммерческие объекты в Алматы, Атырау и Актау, а также продукция ArJan крупным планом. Точная роль ArJan в каждом объекте (поставка профиля, готовых конструкций или монтаж) уточняется отдельно — на фото показана продукция, использованная в проекте.</p></div>
-<div class="phead__media frame" data-frame=""><div class="frame__img"><picture><source srcset="/public/portfolio/nest-grand-almaty-full.webp" type="image/webp"/><img alt="ЖК «Nest Grand», Алматы — двор жилого комплекса" fetchpriority="high" height="577" src="/public/portfolio/nest-grand-almaty-full.jpg" width="760"/></picture></div><div aria-hidden="true" class="stamp phead__stamp" data-stamp=""><b>1000+</b><small>проектов</small></div></div>
+<div class="phead__text"><span class="label">Объекты</span><h1 class="h1">Проекты с продукцией ArJan</h1><p class="lead">Жилые комплексы и коммерческие объекты в Алматы, Атырау и Актау, а также продукция ArJan крупным планом. Точная роль ArJan в каждом объекте (поставка профиля, готовых конструкций или монтаж) уточняется отдельно — на фото показана продукция, использованная в проекте.</p></div>
+<div aria-hidden="false" class="mwin"><div class="mwin__box"><div class="mwin__view"><picture><source srcset="/public/portfolio/nest-grand-almaty-full.webp" type="image/webp"/><img alt="ЖК «Nest Grand», Алматы — двор жилого комплекса" fetchpriority="high" height="577" src="/public/portfolio/nest-grand-almaty-full.jpg" width="760"/></picture></div><div class="mwin__op"><span class="mwin__sash mwin__sash--l"></span><span class="mwin__sash mwin__sash--r"></span></div></div></div>
 </div>
 </div>
 </section>
 <section class="sec sec--tight">
 <div class="wrap">
-<div class="sh" data-rise=""><div class="sh__title"><span class="eyebrow">Видео</span><h2 class="h-xl">Объект вживую</h2></div><div class="sh__aside"><p class="lead">Панорамная раздвижная алюминиевая система ArJan, установленная на реальном объекте в Алматы.</p></div></div>
+<div class="head" data-rise=""><div class="head__t"><span class="label">Видео</span><h2 class="h2">Объект вживую</h2></div><div class="head__a"><p class="lead">Панорамная раздвижная алюминиевая система ArJan, установленная на реальном объекте в Алматы.</p></div></div>
 <div class="videos">
-<div class="frame vid" data-frame="">
+<div class="pane vid">
 <button class="video-poster-play" data-video-src="/public/videos/web/object-video-1.mp4" data-video-title="Раздвижная алюминиевая система ArJan на объекте" data-video-trigger="" type="button">
 <img alt="Раздвижная алюминиевая система ArJan на объекте — видео" height="720" loading="lazy" src="/public/videos/posters/object-video-1-poster.jpg" width="1280"/>
 <span class="vp-icon"><svg viewbox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#fff"></path></svg></span>
 </button>
 </div>
-<div class="frame vid" data-frame="">
+<div class="pane vid">
 <button class="video-poster-play" data-video-src="/public/videos/web/object-video-2.mp4" data-video-title="Раздвижная система ArJan — крупным планом" data-video-trigger="" type="button">
 <img alt="Раздвижная алюминиевая система ArJan — крупным планом, видео" height="1280" loading="lazy" src="/public/videos/posters/object-video-2-poster.jpg" width="720"/>
 <span class="vp-icon"><svg viewbox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#fff"></path></svg></span>
@@ -130,13 +131,13 @@
 <div class="pf-grid" data-pf-grid=""></div>
 </div>
 </section>
-<section class="sec sec--red ctaband"><span aria-hidden="true" class="ctaband__diag"></span><div class="wrap ctaband__in"><h2 class="h-xl">Хотите такой же результат на своём объекте?</h2><div class="actions"><a class="btn btn--light" href="/developers.html">Для застройщиков →</a>
-<a class="btn btn--ghost" href="https://wa.me/77088005929" rel="noopener" target="_blank">Написать в WhatsApp</a></div></div></section>
+<section class="ctaband on-dark"><div class="wrap ctaband__in"><h2 class="h2">Хотите такой же результат на своём объекте?</h2><div class="actions"><a class="btn btn--light" href="/developers.html">Для застройщиков →</a>
+<a class="btn btn--ghost" href="https://wa.me/77088005929" rel="noopener" target="_blank">Написать в WhatsApp</a></div></div><div aria-hidden="true" class="ctaband__win"><i></i><i></i><i></i></div></section>
 
 </main>
 
 <!-- footer -->
-<footer class="foot on-ink">
+<footer class="foot on-dark">
   <div class="wrap">
     <div class="foot__top">
       <a href="/" class="logo" aria-label="ArJan — на главную"><img src="/public/branding/logo-light.png" alt="" width="148" height="56" loading="lazy" decoding="async"></a>
@@ -186,7 +187,7 @@
 </button>
 <div class="wa-drawer-backdrop" id="waDrawerBackdrop"></div>
 <div class="wa-drawer" id="waDrawer" role="dialog" aria-labelledby="waDrawerTitle">
-  <div class="wa-drawer-head on-ink">
+  <div class="wa-drawer-head">
     <div>
       <h3 id="waDrawerTitle">Напишите нам в WhatsApp</h3>
       <p>Ответим на вопросы и поможем подобрать подходящее решение</p>

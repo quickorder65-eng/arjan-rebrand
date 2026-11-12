@@ -42,13 +42,13 @@
         if (hdrEl) mm.style.setProperty('--mm-top', Math.max(0, hdrEl.getBoundingClientRect().bottom) + 'px');
         var open = mm.classList.toggle('open');
         burger.setAttribute('aria-expanded', open);
-        document.body.style.overflow = open ? 'hidden' : '';
+        document.documentElement.style.overflow = open ? 'hidden' : '';
       });
       mm.querySelectorAll('a').forEach(function (a) {
         a.addEventListener('click', function () {
           mm.classList.remove('open');
           burger.setAttribute('aria-expanded', false);
-          document.body.style.overflow = '';
+          document.documentElement.style.overflow = '';
         });
       });
     }
@@ -89,7 +89,7 @@
      [data-rise]  — спокойное появление заголовков секций.
      Без JS и при prefers-reduced-motion всё сразу видно в финальном состоянии. */
   function initReveal() {
-    var els = [].slice.call(document.querySelectorAll('[data-frame],[data-stamp],[data-rise]'));
+    var els = [].slice.call(document.querySelectorAll('[data-rise]'));
     if (reduceMotion || !('IntersectionObserver' in window)) {
       els.forEach(function (el) { el.classList.add('is-in'); });
       return;
@@ -206,13 +206,13 @@
       lastFocused = document.activeElement;
       frame.innerHTML = '<video controls autoplay playsinline preload="none" src="' + src + '" aria-label="' + (title || 'Видео производства ArJan') + '"></video>';
       backdrop.classList.add('open');
-      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
       closeBtn.focus();
     }
     function close() {
       backdrop.classList.remove('open');
       frame.innerHTML = '';
-      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
       if (lastFocused) lastFocused.focus();
     }
     document.querySelectorAll('[data-video-trigger]').forEach(function (btn) {
@@ -618,6 +618,142 @@
     }
   }
 
+
+  /* ---------- каталог-конфигуратор: рама перестраивается под категорию ---------- */
+  function initConfigurator() {
+    var tabs = [].slice.call(document.querySelectorAll('.cfg__tab'));
+    if (!tabs.length) return;
+    var rig = document.querySelector('.rig');
+    var imgs = rig ? rig.querySelectorAll('.rig__img') : [];
+    var prof = rig ? rig.querySelector('.rig__profile img') : null;
+    var panel = document.getElementById('cfg-panel');
+    var el = function (id) { return document.getElementById(id); };
+    var cur = 0, swapTimer;
+    function select(i, focus) {
+      if (i === cur && !focus) return;
+      var t = tabs[i], d = t.dataset;
+      tabs.forEach(function (x, j) {
+        x.setAttribute('aria-selected', j === i ? 'true' : 'false');
+        x.tabIndex = j === i ? 0 : -1;
+      });
+      if (focus) t.focus();
+      cur = i;
+      // рама: новая конфигурация (CSS-переходы и сцена движения)
+      if (rig) {
+        rig.setAttribute('data-config', d.cfg);
+        if (/^profile/.test(d.cfg) && prof) {
+          prof.src = d.img + '.png';
+        } else if (imgs.length === 2) {
+          var on = rig.querySelector('.rig__img.is-on'), off = on === imgs[0] ? imgs[1] : imgs[0];
+          var src = d.img + '.jpg';
+          if (on.getAttribute('src') !== src) {
+            off.onload = function () { on.classList.remove('is-on'); off.classList.add('is-on'); };
+            off.src = src;
+            if (off.complete) off.onload();
+          }
+        }
+      }
+      // описание обновляется в такт движению рамы
+      clearTimeout(swapTimer);
+      panel.classList.add('is-swap');
+      swapTimer = setTimeout(function () {
+        el('cfg-num').textContent = (i < 9 ? '0' : '') + (i + 1);
+        el('cfg-title').textContent = d.title;
+        el('cfg-text').textContent = d.text;
+        el('cfg-tag').textContent = d.tag;
+        el('cfg-link').setAttribute('href', d.href);
+        el('cfg-motion').textContent = d.motion;
+        panel.setAttribute('aria-labelledby', t.id);
+        panel.classList.remove('is-swap');
+      }, reduceMotion ? 0 : 170);
+      // на телефоне показываем раму, если она ушла из кадра
+      if (window.innerWidth < 1100 && rig && !focus) {
+        var r = rig.getBoundingClientRect();
+        if (r.top < 60 || r.bottom > window.innerHeight) rig.scrollIntoView({ block: 'center', behavior: reduceMotion ? 'auto' : 'smooth' });
+      }
+    }
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { select(i); });
+      t.addEventListener('keydown', function (e) {
+        var k = e.key, n = null;
+        if (k === 'ArrowDown' || k === 'ArrowRight') n = (i + 1) % tabs.length;
+        if (k === 'ArrowUp' || k === 'ArrowLeft') n = (i - 1 + tabs.length) % tabs.length;
+        if (k === 'Home') n = 0;
+        if (k === 'End') n = tabs.length - 1;
+        if (n !== null) { e.preventDefault(); select(n, true); }
+      });
+    });
+    // предзагрузка фото категорий
+    setTimeout(function () { tabs.forEach(function (t) { if (!/^profile/.test(t.dataset.cfg)) { var im = new Image(); im.src = t.dataset.img + '.jpg'; } }); }, 2500);
+  }
+
+  /* ---------- производство: рама раскрывает фото по ходу прокрутки (без перехвата) ---------- */
+  function initScrollReveal() {
+    var els = [].slice.call(document.querySelectorAll('[data-reveal]'));
+    if (!els.length) return;
+    if (reduceMotion) { els.forEach(function (e) { e.style.setProperty('--p', 1); }); return; }
+    var ticking = false;
+    function update() {
+      ticking = false;
+      var vh = window.innerHeight;
+      els.forEach(function (e) {
+        var r = e.getBoundingClientRect();
+        var p = (vh * 0.95 - r.top) / (vh * 0.7);
+        p = Math.max(0, Math.min(1, p));
+        p = 1 - Math.pow(1 - p, 2);
+        e.style.setProperty('--p', p.toFixed(3));
+      });
+    }
+    window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  }
+
+  /* ---------- лента объектов ---------- */
+  function initRail() {
+    document.querySelectorAll('[data-rail]').forEach(function (rail) {
+      var list = rail.querySelector('.rail__list'); if (!list) return;
+      var bar = rail.querySelector('.rail__bar i');
+      var sec = rail.closest('section');
+      var prev = sec.querySelector('[data-rail-prev]'), next = sec.querySelector('[data-rail-next]');
+      function step() { var it = list.querySelector('.rail__item'); return it ? it.getBoundingClientRect().width + 24 : 300; }
+      function upd() {
+        var max = list.scrollWidth - list.clientWidth;
+        var ratio = list.clientWidth / list.scrollWidth;
+        if (bar) { bar.parentNode.style.setProperty('--rp', ratio); bar.style.setProperty('--rx', max > 0 ? (list.scrollLeft / max) * ((1 - ratio) / ratio) : 0); }
+        if (prev) prev.disabled = list.scrollLeft < 4;
+        if (next) next.disabled = list.scrollLeft > max - 4;
+      }
+      if (prev) prev.addEventListener('click', function () { list.scrollBy({ left: -step(), behavior: reduceMotion ? 'auto' : 'smooth' }); });
+      if (next) next.addEventListener('click', function () { list.scrollBy({ left: step(), behavior: reduceMotion ? 'auto' : 'smooth' }); });
+      list.addEventListener('scroll', upd, { passive: true });
+      window.addEventListener('resize', upd);
+      upd();
+    });
+  }
+
+  /* ---------- калькулятор: превью окна по размерам и типу ---------- */
+  function initCalcPreview() {
+    var win = document.querySelector('.preview__win'); if (!win) return;
+    var cw = document.getElementById('cw'), ch = document.getElementById('ch');
+    var pw = document.getElementById('pvw'), ph = document.getElementById('pvh');
+    function upd() {
+      var w = +cw.value, h = +ch.value;
+      var box = win.parentNode.getBoundingClientRect();
+      var maxW = Math.min(box.width - 70, 300), maxH = box.height - 60;
+      var k = Math.min(maxW / w, maxH / h);
+      win.style.setProperty('--pw', Math.round(w * k) + 'px');
+      win.style.setProperty('--ph', Math.round(h * k) + 'px');
+      pw.textContent = w; ph.textContent = h;
+    }
+    [cw, ch].forEach(function (i) { i.addEventListener('input', upd); });
+    document.querySelectorAll('.copt').forEach(function (o, i) {
+      o.addEventListener('click', function () { win.setAttribute('data-type', i); });
+    });
+    window.addEventListener('resize', upd);
+    upd();
+  }
+
   ready(function () {
     initHeader();
     initFaq();
@@ -630,6 +766,10 @@
     initCustomSelects();
     initForms();
     initReveal();
+    initConfigurator();
+    initScrollReveal();
+    initRail();
+    initCalcPreview();
     initImgFade();
     initCounters();
     initAnalytics();

@@ -16,9 +16,9 @@
 <meta property="og:image" content="https://arjan.kz/public/products/terrasy/pergola-hero.jpg">
 <link rel="icon" type="image/png" sizes="32x32" href="/public/branding/favicon-32.png">
 <link rel="apple-touch-icon" href="/public/branding/apple-touch-icon.png">
-<link rel="preload" href="/assets/fonts/rubik-cyrillic-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/rubik-cyrillic-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/golos-text-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/style.css?v=20261111">
+<link rel="stylesheet" href="/assets/css/style.css?v=20261112">
 <script>document.documentElement.classList.add('js')</script>
 <style>
   .tsys-chip{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px 18px;font-family:var(--font-body);font-size:14.5px;font-weight:600;color:var(--ink);box-shadow:0 10px 24px -18px rgba(22,25,29,.35)}
@@ -78,9 +78,9 @@
       <a href="tel:+77088005929" class="nav-phone">8 (708) 800-59-29</a>
       <a href="/#contacts" class="btn btn--sun">Оставить заявку</a>
     </div>
-    <button class="burger" aria-label="Меню" aria-expanded="false" aria-controls="mobileMenu" id="burger"><span></span><span></span><span></span></button>
+    <button class="burger" aria-expanded="false" aria-controls="mobileMenu" id="burger"><span class="burger__ico" aria-hidden="true"><span></span><span></span><span></span></span>Меню</button>
   </div>
-  <div class="mobile-menu on-ink" id="mobileMenu">
+  <div class="mobile-menu on-dark" id="mobileMenu">
     <nav class="mm-links" aria-label="Мобильная навигация">
       <a href="/developers.html"><span class="mm-no">01</span>Для бизнеса</a>
       <a href="/#products"><span class="mm-no">02</span>Продукция</a>
@@ -96,30 +96,31 @@
       <a href="https://wa.me/77088005929" target="_blank" rel="noopener" class="btn btn--wa btn--block mm-wa">Написать в WhatsApp</a>
     </div>
   </div>
+  <div class="mm-backdrop" aria-hidden="true"></div>
 </header>
 
 <main id="main">
 
 
-<section class="phead phead--product">
+<section class="phead on-dark">
 <div class="wrap">
 <nav aria-label="Хлебные крошки" class="crumbs">
 <a href="/">Главная</a><span class="sep">/</span><a href="/terrasy.html">Системы для террас</a><span class="sep">/</span><span class="cur">Пергола с выдвижной крышей</span>
 </nav>
 <div class="phead__grid">
-<div class="phead__text"><span class="eyebrow">Системы для террас</span><h1 class="h-xl">Пергола с выдвижной тканевой крышей</h1><p class="lead">Алюминиевая конструкция с тканевым полотном, которое раскрывается за секунды — тень, когда нужно, открытое небо, когда захочется. Подходит для дома, летней площадки кафе или зоны отдыха у бассейна.</p><div class="actions"><a class="btn btn--wa" href="https://wa.me/77088005929?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%BF%D0%B5%D1%80%D0%B3%D0%BE%D0%BB%D0%B0%20%D1%81%20%D0%B2%D1%8B%D0%B4%D0%B2%D0%B8%D0%B6%D0%BD%D0%BE%D0%B9%20%D0%BA%D1%80%D1%8B%D1%88%D0%B5%D0%B9" rel="noopener" target="_blank">Написать в WhatsApp</a>
+<div class="phead__text"><span class="label">Системы для террас</span><h1 class="h1">Пергола с выдвижной тканевой крышей</h1><p class="lead">Алюминиевая конструкция с тканевым полотном, которое раскрывается за секунды — тень, когда нужно, открытое небо, когда захочется. Подходит для дома, летней площадки кафе или зоны отдыха у бассейна.</p><div class="actions"><a class="btn btn--wa" href="https://wa.me/77088005929?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%BF%D0%B5%D1%80%D0%B3%D0%BE%D0%BB%D0%B0%20%D1%81%20%D0%B2%D1%8B%D0%B4%D0%B2%D0%B8%D0%B6%D0%BD%D0%BE%D0%B9%20%D0%BA%D1%80%D1%8B%D1%88%D0%B5%D0%B9" rel="noopener" target="_blank">Написать в WhatsApp</a>
 <a class="btn btn--sun" href="#catalog-form">Получить консультацию →</a>
 <a class="btn btn--ghost" href="/terrasy.html">Все системы для террас</a></div></div>
-<div class="phead__media frame" data-frame=""><div class="frame__img"><picture>
+<div aria-hidden="false" class="mwin"><div class="mwin__box"><div class="mwin__view"><picture>
 <source srcset="/public/products/terrasy/pergola-detail.webp" type="image/webp"/>
 <img alt="Пергола с выдвижной тканевой крышей — механизм" class="ph-fade" loading="lazy" src="/public/products/terrasy/pergola-detail.jpg"/>
-</picture></div></div>
+</picture></div><div class="mwin__op"><span class="mwin__sash mwin__sash--l"></span><span class="mwin__sash mwin__sash--r"></span></div></div></div>
 </div>
 </div>
 </section>
 <section class="passport">
 <div class="wrap passport__grid">
-<div class="passport__specs"><span class="passport__label">Паспорт изделия</span><dl class="spec-list"><div class="spec"><dt class="sk">Тип конструкции</dt><dd class="sv">Алюминиевая рама, тканевая крыша</dd></div><div class="spec"><dt class="sk">Механизм</dt><dd class="sv">Ручной или моторизованный привод</dd></div><div class="spec"><dt class="sk">Управление</dt><dd class="sv">Кнопка / пульт</dd></div><div class="spec"><dt class="sk">Размеры пролёта</dt><dd class="sv">от 300 до 1200 см по ширине</dd></div><div class="spec"><dt class="sk">Цвет каркаса</dt><dd class="sv">Любой RAL по выбору</dd></div><div class="spec"><dt class="sk">Применение</dt><dd class="sv">Дом, кафе, рестораны, бассейны</dd></div></dl></div>
+<div class="passport__specs"><span class="label">Характеристики</span><dl class="spec-list"><div class="spec"><dt class="sk">Тип конструкции</dt><dd class="sv">Алюминиевая рама, тканевая крыша</dd></div><div class="spec"><dt class="sk">Механизм</dt><dd class="sv">Ручной или моторизованный привод</dd></div><div class="spec"><dt class="sk">Управление</dt><dd class="sv">Кнопка / пульт</dd></div><div class="spec"><dt class="sk">Размеры пролёта</dt><dd class="sv">от 300 до 1200 см по ширине</dd></div><div class="spec"><dt class="sk">Цвет каркаса</dt><dd class="sv">Любой RAL по выбору</dd></div><div class="spec"><dt class="sk">Применение</dt><dd class="sv">Дом, кафе, рестораны, бассейны</dd></div></dl></div>
 <div class="passport__adv"><ul class="adv-list">
 <li>Тканевая крыша складывается и раскрывается по нажатию кнопки или вручную</li>
 <li>Алюминиевая рама не боится осадков и перепадов температуры</li>
@@ -129,17 +130,17 @@
 </ul></div>
 </div>
 </section>
-<section class="sec sec--alt">
+<section class="sec sec--mist">
 <div class="wrap prose">
 <h2>О системе</h2>
 <p>Пергола с выдвижной крышей — гибрид навеса и зимнего сада: алюминиевый каркас с тканевым полотном, которое двигается по направляющим на раме. Полотно раскрывается для тени и собирается гармошкой, когда хочется открытого неба — вручную или от электропривода.</p>
 <p>Подходит и для частного дома, и для коммерческих объектов — летних площадок кафе и ресторанов, зон отдыха у бассейна. Каркас окрашивается в любой цвет по палитре RAL под фасад объекта.</p>
 <h3>Где используется</h3>
 <div class="chips">
-<span class="chip chip--soft">Терраса частного дома</span>
-<span class="chip chip--soft">Летняя площадка кафе</span>
-<span class="chip chip--soft">Зона у бассейна</span>
-<span class="chip chip--soft">Коммерческие пространства</span>
+<span class="chip">Терраса частного дома</span>
+<span class="chip">Летняя площадка кафе</span>
+<span class="chip">Зона у бассейна</span>
+<span class="chip">Коммерческие пространства</span>
 </div>
 </div>
 </section>
@@ -153,7 +154,7 @@
 </div>
 </div>
 </section>
-<section class="sec sec--alt">
+<section class="sec sec--mist">
 <div class="wrap prose">
 <h2>Технические характеристики</h2>
 <p>Конструкция набирается из алюминиевых профилей собственного сечения — рама выдерживает ветровые и снеговые нагрузки, а тканевое полотно ходит по направляющим без перекосов даже на больших пролётах.</p>
@@ -171,8 +172,8 @@
 <div class="wrap">
 <div class="contacts">
 <div class="contacts__side">
-<span class="eyebrow">Похожие системы</span>
-<h2 class="h-xl">Смотрите также</h2>
+<span class="label">Похожие системы</span>
+<h2 class="h2">Смотрите также</h2>
 <div class="internal-links">
 <a href="/products/bioklimaticheskaya-pergola.html">Биоклиматическая пергола</a>
 <a href="/products/gilotinnoe-osteklenie.html">Гильотинное остекление</a>
@@ -181,8 +182,8 @@
 </div>
 
 <dl class="cinfo"><div class="ci"><dt class="k">Телефон / WhatsApp</dt><dd class="v"><a href="tel:+77088005929">8 (708) 800-59-29</a></dd></div></dl></div>
-<div class="cform frame">
-<h3 class="h-m">Получить консультацию</h3>
+<div class="cform">
+<h3 class="h3">Получить консультацию</h3>
 <p class="muted">Оставьте заявку — расскажем подробнее и подготовим расчёт под ваш объект.</p>
 <script data-b24-form="inline/2/en3xq5" data-b24-form-telemetry-sign="v1:2:site.ee7655de59ed19e3f42727852744d25e41b5a58178186d975f5b084a82cb7f35" data-skip-moving="true">
 (function(w,d,u){
@@ -198,7 +199,7 @@ var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
 </main>
 
 <!-- footer -->
-<footer class="foot on-ink">
+<footer class="foot on-dark">
   <div class="wrap">
     <div class="foot__top">
       <a href="/" class="logo" aria-label="ArJan — на главную"><img src="/public/branding/logo-light.png" alt="" width="148" height="56" loading="lazy" decoding="async"></a>
@@ -248,7 +249,7 @@ var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
 </button>
 <div class="wa-drawer-backdrop" id="waDrawerBackdrop"></div>
 <div class="wa-drawer" id="waDrawer" role="dialog" aria-labelledby="waDrawerTitle">
-  <div class="wa-drawer-head on-ink">
+  <div class="wa-drawer-head">
     <div>
       <h3 id="waDrawerTitle">Напишите нам в WhatsApp</h3>
       <p>Ответим на вопросы и поможем подобрать подходящее решение</p>

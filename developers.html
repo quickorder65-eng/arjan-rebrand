@@ -16,9 +16,9 @@
 <meta property="og:image" content="https://arjan.kz/public/branding/og-default.jpg">
 <link rel="icon" type="image/png" sizes="32x32" href="/public/branding/favicon-32.png">
 <link rel="apple-touch-icon" href="/public/branding/apple-touch-icon.png">
-<link rel="preload" href="/assets/fonts/rubik-cyrillic-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/rubik-cyrillic-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/golos-text-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/style.css?v=20261111">
+<link rel="stylesheet" href="/assets/css/style.css?v=20261112">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
 {
@@ -66,9 +66,9 @@
       <a href="tel:+77088005929" class="nav-phone">8 (708) 800-59-29</a>
       <a href="/#contacts" class="btn btn--sun">Оставить заявку</a>
     </div>
-    <button class="burger" aria-label="Меню" aria-expanded="false" aria-controls="mobileMenu" id="burger"><span></span><span></span><span></span></button>
+    <button class="burger" aria-expanded="false" aria-controls="mobileMenu" id="burger"><span class="burger__ico" aria-hidden="true"><span></span><span></span><span></span></span>Меню</button>
   </div>
-  <div class="mobile-menu on-ink" id="mobileMenu">
+  <div class="mobile-menu on-dark" id="mobileMenu">
     <nav class="mm-links" aria-label="Мобильная навигация">
       <a href="/developers.html"><span class="mm-no">01</span>Для бизнеса</a>
       <a href="/#products"><span class="mm-no">02</span>Продукция</a>
@@ -84,38 +84,39 @@
       <a href="https://wa.me/77088005929" target="_blank" rel="noopener" class="btn btn--wa btn--block mm-wa">Написать в WhatsApp</a>
     </div>
   </div>
+  <div class="mm-backdrop" aria-hidden="true"></div>
 </header>
 
 <main id="main">
 
 
-<section class="phead">
+<section class="phead on-dark">
 <div class="wrap">
 <nav aria-label="Хлебные крошки" class="crumbs">
 <a href="/">Главная</a><span class="sep">/</span><span class="cur">Для бизнеса</span>
 </nav>
 <div class="phead__grid">
-<div class="phead__text"><span class="eyebrow">Для дилеров и застройщиков</span><h1 class="h-xl">Профильные и оконные решения для тех, кто работает объёмом</h1><p class="lead">ArJan поставляет алюминиевый и пластиковый профиль, готовые окна, двери и раздвижные конструкции дилерам и застройщикам — с оптовыми условиями, комплектацией проекта, расчётом стоимости и согласованными сроками поставки.</p><div class="actions"><a class="btn btn--sun" href="#dev-form">Получить предложение →</a>
+<div class="phead__text"><span class="label">Для дилеров и застройщиков</span><h1 class="h1">Профильные и оконные решения для тех, кто работает объёмом</h1><p class="lead">ArJan поставляет алюминиевый и пластиковый профиль, готовые окна, двери и раздвижные конструкции дилерам и застройщикам — с оптовыми условиями, комплектацией проекта, расчётом стоимости и согласованными сроками поставки.</p><div class="actions"><a class="btn btn--sun" href="#dev-form">Получить предложение →</a>
 <a class="btn btn--ghost" href="tel:+77088005929">8 (708) 800-59-29</a>
 <a class="btn btn--wa" href="https://wa.me/77088005929?text=Здравствуйте!%20Работаю%20с%20объёмом%20(дилер/застройщик),%20хочу%20обсудить%20поставку%20продукции%20ArJan" rel="noopener" target="_blank">Написать в WhatsApp</a></div></div>
-<div class="phead__media frame" data-frame=""><div class="frame__img"><picture><source srcset="/public/portfolio/duo-towers-almaty-full.webp" type="image/webp"/><img alt="ЖК «Duo Towers», Алматы — объект с продукцией ArJan" fetchpriority="high" height="1067" src="/public/portfolio/duo-towers-almaty-full.jpg" width="1600"/></picture></div><div aria-hidden="true" class="stamp phead__stamp" data-stamp=""><b>B2B</b><small>объём</small></div></div>
+<div aria-hidden="false" class="mwin"><div class="mwin__box"><div class="mwin__view"><picture><source srcset="/public/portfolio/duo-towers-almaty-full.webp" type="image/webp"/><img alt="ЖК «Duo Towers», Алматы — объект с продукцией ArJan" fetchpriority="high" height="1067" src="/public/portfolio/duo-towers-almaty-full.jpg" width="1600"/></picture></div><div class="mwin__op"><span class="mwin__sash mwin__sash--l"></span><span class="mwin__sash mwin__sash--r"></span></div></div></div>
 </div>
 </div>
 </section>
 <section class="sec">
 <div class="wrap">
-<div class="split split--duo"><article class="split__half split__half--ink on-ink"><h3 class="h-l">Дилерам</h3><p>Оптовая закупка профиля, фурнитуры и материалов для перепродажи или собственного производства — гибкие партии, отпускные цены под объём, стабильные поставки.</p></article><article class="split__half split__half--paper"><h3 class="h-l">Застройщикам</h3><p>Поставка готовых окон, дверей и конструкций под конкретный объект — с комплектацией проекта, монтажом и согласованными сроками сдачи.</p><span aria-hidden="true" class="split__circle"></span></article></div>
+<div class="paths paths--duo"><article class="path path--dark on-dark"><div class="path__top"><span class="path__no">01</span></div><h3 class="h3">Дилерам</h3><p>Оптовая закупка профиля, фурнитуры и материалов для перепродажи или собственного производства — гибкие партии, отпускные цены под объём, стабильные поставки.</p></article><article class="path"><div class="path__top"><span class="path__no">02</span></div><h3 class="h3">Застройщикам</h3><p>Поставка готовых окон, дверей и конструкций под конкретный объект — с комплектацией проекта, монтажом и согласованными сроками сдачи.</p></article></div>
 </div>
 </section>
-<section class="sec sec--alt">
+<section class="sec sec--mist">
 <div class="wrap">
-<div class="sh" data-rise=""><div class="sh__title"><span class="eyebrow">Что доступно</span><h2 class="h-xl">Категории продукции для дилеров и застройщиков</h2></div><div class="sh__aside"><p class="lead">Дилерам — материалы и профиль оптом для перепродажи или собственного производства. Застройщикам — готовые конструкции с комплектацией и монтажом под объект.</p></div></div>
-<ol class="rows"><li class="row"><a href="/products/aluminievyy-profil.html"><span class="row__no">01</span><span class="row__main"><span class="row__title">Алюминиевый профиль</span><span class="row__text">Оптовая поставка профиля брендов GOLD, ALPROF, GRÜNDER — для комплектации собственного производства партнёра.</span></span><span aria-hidden="true" class="arrow"></span></a></li><li class="row"><a href="/products/plastikovyy-profil.html"><span class="row__no">02</span><span class="row__main"><span class="row__title">Пластиковый профиль</span><span class="row__text">Профиль GRÜNDER, REHAU, SAPA — резка и ламинация под объём проекта.</span></span><span aria-hidden="true" class="arrow"></span></a></li><li class="row"><a href="/products/plastikovye-okna.html"><span class="row__no">03</span><span class="row__main"><span class="row__title">Пластиковые окна</span><span class="row__text">Готовые окна ПВХ для жилых и коммерческих объектов — с замером, доставкой и монтажом.</span></span><span aria-hidden="true" class="arrow"></span></a></li><li class="row"><a href="/products/aluminievye-okna-i-dveri.html"><span class="row__no">04</span><span class="row__main"><span class="row__title">Алюминиевые окна и двери</span><span class="row__text">Тёплый и холодный алюминий: окна, двери, входные группы для объектов.</span></span><span aria-hidden="true" class="arrow"></span></a></li><li class="row"><a href="/products/razdvizhnye-sistemy.html"><span class="row__no">05</span><span class="row__main"><span class="row__title">Раздвижные системы</span><span class="row__text">Раздвижное и панорамное остекление балконов, лоджий и террас для жилых комплексов.</span></span><span aria-hidden="true" class="arrow"></span></a></li><li class="row"><a href="/products/furnitura.html"><span class="row__no">06</span><span class="row__main"><span class="row__title">Оконная и дверная фурнитура</span><span class="row__text">Фурнитура в комплекте с готовыми конструкциями — состав под проект уточняется у менеджера.</span></span><span aria-hidden="true" class="arrow"></span></a></li><li class="row"><a href="/products/steklopakety.html"><span class="row__no">07</span><span class="row__main"><span class="row__title">Стеклопакеты</span><span class="row__text">Одно- и двухкамерные стеклопакеты для собственного производства партнёра.</span></span><span aria-hidden="true" class="arrow"></span></a></li><li class="row"><a href="/products/komplektuyushchie.html"><span class="row__no">08</span><span class="row__main"><span class="row__title">Комплектующие</span><span class="row__text">Сопутствующие комплектующие для оконных и дверных конструкций объекта.</span></span><span aria-hidden="true" class="arrow"></span></a></li></ol>
+<div class="head" data-rise=""><div class="head__t"><span class="label">Что доступно</span><h2 class="h2">Категории продукции для дилеров и застройщиков</h2></div><div class="head__a"><p class="lead">Дилерам — материалы и профиль оптом для перепродажи или собственного производства. Застройщикам — готовые конструкции с комплектацией и монтажом под объект.</p></div></div>
+<ol class="cats"><li><a class="cat" href="/products/aluminievyy-profil.html"><span class="cat__no">01</span><span class="cat__title">Алюминиевый профиль</span><span class="cat__text">Оптовая поставка профиля брендов GOLD, ALPROF, GRÜNDER — для комплектации собственного производства партнёра.</span><span aria-hidden="true" class="cat__go">→</span></a></li><li><a class="cat" href="/products/plastikovyy-profil.html"><span class="cat__no">02</span><span class="cat__title">Пластиковый профиль</span><span class="cat__text">Профиль GRÜNDER, REHAU, SAPA — резка и ламинация под объём проекта.</span><span aria-hidden="true" class="cat__go">→</span></a></li><li><a class="cat" href="/products/plastikovye-okna.html"><span class="cat__no">03</span><span class="cat__title">Пластиковые окна</span><span class="cat__text">Готовые окна ПВХ для жилых и коммерческих объектов — с замером, доставкой и монтажом.</span><span aria-hidden="true" class="cat__go">→</span></a></li><li><a class="cat" href="/products/aluminievye-okna-i-dveri.html"><span class="cat__no">04</span><span class="cat__title">Алюминиевые окна и двери</span><span class="cat__text">Тёплый и холодный алюминий: окна, двери, входные группы для объектов.</span><span aria-hidden="true" class="cat__go">→</span></a></li><li><a class="cat" href="/products/razdvizhnye-sistemy.html"><span class="cat__no">05</span><span class="cat__title">Раздвижные системы</span><span class="cat__text">Раздвижное и панорамное остекление балконов, лоджий и террас для жилых комплексов.</span><span aria-hidden="true" class="cat__go">→</span></a></li><li><a class="cat" href="/products/furnitura.html"><span class="cat__no">06</span><span class="cat__title">Оконная и дверная фурнитура</span><span class="cat__text">Фурнитура в комплекте с готовыми конструкциями — состав под проект уточняется у менеджера.</span><span aria-hidden="true" class="cat__go">→</span></a></li><li><a class="cat" href="/products/steklopakety.html"><span class="cat__no">07</span><span class="cat__title">Стеклопакеты</span><span class="cat__text">Одно- и двухкамерные стеклопакеты для собственного производства партнёра.</span><span aria-hidden="true" class="cat__go">→</span></a></li><li><a class="cat" href="/products/komplektuyushchie.html"><span class="cat__no">08</span><span class="cat__title">Комплектующие</span><span class="cat__text">Сопутствующие комплектующие для оконных и дверных конструкций объекта.</span><span aria-hidden="true" class="cat__go">→</span></a></li></ol>
 </div>
 </section>
 <section class="sec">
 <div class="wrap">
-<div class="sh" data-rise=""><div class="sh__title"><span class="eyebrow">Как строится работа</span><h2 class="h-xl">От заявки до объекта</h2></div></div>
+<div class="head" data-rise=""><div class="head__t"><span class="label">Как строится работа</span><h2 class="h2">От заявки до объекта</h2></div></div>
 <div class="steps">
 <div class="step"><div class="sno">01</div><h3>Консультация</h3><p>Обсуждаем объект, объёмы, категории продукции и сроки — по телефону, в WhatsApp или на встрече.</p></div>
 <div class="step"><div class="sno">02</div><h3>Расчёт стоимости</h3><p>Готовим расчёт под проект — с учётом объёма заказа и требуемых сроков поставки.</p></div>
@@ -126,24 +127,24 @@
 </div>
 </div>
 </section>
-<section class="sec sec--alt">
+<section class="sec sec--mist">
 <div class="wrap">
-<div class="sh" data-rise=""><div class="sh__title"><span class="eyebrow">Объекты</span><h2 class="h-xl">Проекты с продукцией ArJan</h2></div><div class="sh__aside"><p class="lead">Часть объектов, где использована продукция ArJan.</p><a class="btn btn--ghost" href="/portfolio.html">Все объекты →</a></div></div>
-<div class="mosaic mosaic--three"><a class="case" href="/portfolio.html"><span class="case__ph"><span class="frame__img"><picture><source srcset="/public/portfolio/astana-aktau-full.webp" type="image/webp"/><img alt="ЖК «Астана», Актау" height="400" loading="lazy" src="/public/portfolio/astana-aktau-full.jpg" width="640"/></picture></span></span><span class="case__body"><span class="plate plate--ink">Актау</span><span class="case__title">ЖК «Астана»</span><span class="case__meta"><span>Объект с использованием профильных систем ArJan</span></span></span></a><a class="case" href="/portfolio.html"><span class="case__ph"><span class="frame__img"><picture><source srcset="/public/portfolio/kausar-atyrau-full.webp" type="image/webp"/><img alt="«Kausar», Атырау" height="400" loading="lazy" src="/public/portfolio/kausar-atyrau-full.jpg" width="640"/></picture></span></span><span class="case__body"><span class="plate plate--ink">Атырау</span><span class="case__title">«Kausar»</span><span class="case__meta"><span>Объект с использованием профильных систем ArJan</span></span></span></a><a class="case" href="/portfolio.html"><span class="case__ph"><span class="frame__img"><picture><source srcset="/public/portfolio/tengizchevroil-atyrau-full.webp" type="image/webp"/><img alt="Бизнес-центр «Тшо Тенгизшевройл», Атырау" height="400" loading="lazy" src="/public/portfolio/tengizchevroil-atyrau-full.jpg" width="640"/></picture></span></span><span class="case__body"><span class="plate plate--ink">Атырау</span><span class="case__title">БЦ «Тшо Тенгизшевройл»</span><span class="case__meta"><span>Коммерческий объект с использованием продукции ArJan</span></span></span></a></div>
+<div class="head" data-rise=""><div class="head__t"><span class="label">Объекты</span><h2 class="h2">Проекты с продукцией ArJan</h2></div><div class="head__a"><p class="lead">Часть объектов, где использована продукция ArJan.</p><a class="btn btn--ghost" href="/portfolio.html">Все объекты →</a></div></div>
+<div class="objs"><a class="obj" href="/portfolio.html"><span class="pane obj__ph"><span class="pane__in"><picture><source srcset="/public/portfolio/astana-aktau-full.webp" type="image/webp"/><img alt="ЖК «Астана», Актау" height="400" loading="lazy" src="/public/portfolio/astana-aktau-full.jpg" width="640"/></picture></span></span><span class="obj__body"><span class="obj__city">Актау</span><span class="obj__title">ЖК «Астана»</span><span class="obj__meta"><span>Объект с использованием профильных систем ArJan</span></span></span></a><a class="obj" href="/portfolio.html"><span class="pane obj__ph"><span class="pane__in"><picture><source srcset="/public/portfolio/kausar-atyrau-full.webp" type="image/webp"/><img alt="«Kausar», Атырау" height="400" loading="lazy" src="/public/portfolio/kausar-atyrau-full.jpg" width="640"/></picture></span></span><span class="obj__body"><span class="obj__city">Атырау</span><span class="obj__title">«Kausar»</span><span class="obj__meta"><span>Объект с использованием профильных систем ArJan</span></span></span></a><a class="obj" href="/portfolio.html"><span class="pane obj__ph"><span class="pane__in"><picture><source srcset="/public/portfolio/tengizchevroil-atyrau-full.webp" type="image/webp"/><img alt="Бизнес-центр «Тшо Тенгизшевройл», Атырау" height="400" loading="lazy" src="/public/portfolio/tengizchevroil-atyrau-full.jpg" width="640"/></picture></span></span><span class="obj__body"><span class="obj__city">Атырау</span><span class="obj__title">БЦ «Тшо Тенгизшевройл»</span><span class="obj__meta"><span>Коммерческий объект с использованием продукции ArJan</span></span></span></a></div>
 </div>
 </section>
 <section class="sec" id="dev-form">
 <div class="wrap">
 <div class="contacts">
 <div class="contacts__side">
-<span class="eyebrow">Свяжитесь с нами</span>
-<h2 class="h-xl">Получить предложение для объекта</h2>
+<span class="label">Свяжитесь с нами</span>
+<h2 class="h2">Получить предложение для объекта</h2>
 
 
 
 <dl class="cinfo"><div class="ci"><dt class="k">Телефон / WhatsApp</dt><dd class="v"><a href="tel:+77088005929">8 (708) 800-59-29</a></dd></div><div class="ci"><dt class="k">Головной офис и производство</dt><dd class="v">г. Алматы, ул. Казыбаева, 12Б/1</dd></div><div class="ci"><dt class="k">Режим работы</dt><dd class="v">Пн–Пт 9:00–18:00, Сб 9:00–13:00, Вс — выходной</dd></div></dl></div>
-<div class="cform frame">
-<h3 class="h-m">Заявка для бизнеса</h3>
+<div class="cform">
+<h3 class="h3">Заявка для бизнеса</h3>
 <p class="muted">Расскажите о задаче — подготовим предложение по продукции, оптовым условиям и срокам.</p>
 <script data-b24-form="inline/2/en3xq5" data-b24-form-telemetry-sign="v1:2:site.ee7655de59ed19e3f42727852744d25e41b5a58178186d975f5b084a82cb7f35" data-skip-moving="true">
 (function(w,d,u){
@@ -159,7 +160,7 @@ var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
 </main>
 
 <!-- footer -->
-<footer class="foot on-ink">
+<footer class="foot on-dark">
   <div class="wrap">
     <div class="foot__top">
       <a href="/" class="logo" aria-label="ArJan — на главную"><img src="/public/branding/logo-light.png" alt="" width="148" height="56" loading="lazy" decoding="async"></a>
@@ -209,7 +210,7 @@ var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
 </button>
 <div class="wa-drawer-backdrop" id="waDrawerBackdrop"></div>
 <div class="wa-drawer" id="waDrawer" role="dialog" aria-labelledby="waDrawerTitle">
-  <div class="wa-drawer-head on-ink">
+  <div class="wa-drawer-head">
     <div>
       <h3 id="waDrawerTitle">Напишите нам в WhatsApp</h3>
       <p>Ответим на вопросы и поможем подобрать подходящее решение</p>

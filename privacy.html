@@ -10,9 +10,9 @@
 <meta name="robots" content="index, follow">
 <link rel="icon" type="image/png" sizes="32x32" href="/public/branding/favicon-32.png">
 <link rel="apple-touch-icon" href="/public/branding/apple-touch-icon.png">
-<link rel="preload" href="/assets/fonts/rubik-cyrillic-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/rubik-cyrillic-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/golos-text-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/style.css?v=20261111">
+<link rel="stylesheet" href="/assets/css/style.css?v=20261112">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -48,9 +48,9 @@
       <a href="tel:+77088005929" class="nav-phone">8 (708) 800-59-29</a>
       <a href="/#contacts" class="btn btn--sun">Оставить заявку</a>
     </div>
-    <button class="burger" aria-label="Меню" aria-expanded="false" aria-controls="mobileMenu" id="burger"><span></span><span></span><span></span></button>
+    <button class="burger" aria-expanded="false" aria-controls="mobileMenu" id="burger"><span class="burger__ico" aria-hidden="true"><span></span><span></span><span></span></span>Меню</button>
   </div>
-  <div class="mobile-menu on-ink" id="mobileMenu">
+  <div class="mobile-menu on-dark" id="mobileMenu">
     <nav class="mm-links" aria-label="Мобильная навигация">
       <a href="/developers.html"><span class="mm-no">01</span>Для бизнеса</a>
       <a href="/#products"><span class="mm-no">02</span>Продукция</a>
@@ -66,19 +66,19 @@
       <a href="https://wa.me/77088005929" target="_blank" rel="noopener" class="btn btn--wa btn--block mm-wa">Написать в WhatsApp</a>
     </div>
   </div>
+  <div class="mm-backdrop" aria-hidden="true"></div>
 </header>
 
 <main id="main">
 
 
-<section class="phead">
+<section class="phead on-dark phead--text">
 <div class="wrap">
 <nav aria-label="Хлебные крошки" class="crumbs">
 <a href="/">Главная</a><span class="sep">/</span><span class="cur">Политика конфиденциальности</span>
 </nav>
 <div class="phead__grid">
-<div class="phead__text"><span class="eyebrow">Документ</span><h1 class="h-xl">Политика обработки персональных данных</h1><p class="lead">Действует для сайта arjan.kz. Описывает, какие данные собираются через формы сайта и как они используются.</p></div>
-<div aria-hidden="true" class="phead__circle"><span class="phead__glyph">§</span></div>
+<div class="phead__text"><span class="label">Документ</span><h1 class="h1">Политика обработки персональных данных</h1><p class="lead">Действует для сайта arjan.kz. Описывает, какие данные собираются через формы сайта и как они используются.</p></div>
 </div>
 </div>
 </section>
@@ -105,7 +105,7 @@
 </main>
 
 <!-- footer -->
-<footer class="foot on-ink">
+<footer class="foot on-dark">
   <div class="wrap">
     <div class="foot__top">
       <a href="/" class="logo" aria-label="ArJan — на главную"><img src="/public/branding/logo-light.png" alt="" width="148" height="56" loading="lazy" decoding="async"></a>
@@ -155,7 +155,7 @@
 </button>
 <div class="wa-drawer-backdrop" id="waDrawerBackdrop"></div>
 <div class="wa-drawer" id="waDrawer" role="dialog" aria-labelledby="waDrawerTitle">
-  <div class="wa-drawer-head on-ink">
+  <div class="wa-drawer-head">
     <div>
       <h3 id="waDrawerTitle">Напишите нам в WhatsApp</h3>
       <p>Ответим на вопросы и поможем подобрать подходящее решение</p>

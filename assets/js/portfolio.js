@@ -65,13 +65,13 @@
     prevBtn.style.display = nextBtn.style.display = multi ? 'flex' : 'none';
     paint();
     lb.classList.add('open');
-    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
     closeBtn.focus();
   }
   function closeLightbox() {
     lb.classList.remove('open');
     stage.innerHTML = '';
-    document.body.style.overflow = '';
+    document.documentElement.style.overflow = '';
     if (lastFocused) lastFocused.focus();
   }
   function step(dir) {
